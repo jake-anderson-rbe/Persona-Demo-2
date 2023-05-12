@@ -1,0 +1,22 @@
+V0.1:
+- Started testing with the dialogue to relationship system. got basic concept down.
+- image system developed
+- 
+
+
+
+def dialogue_test():
+    decide = input("a or b? ")
+    relationship_level = range(0, 25)
+    #add = relationship_level + 1
+    if decide == "a":
+      print("good choice")
+      dialogue_level_up()
+      print(test_dude.level)
+      relationship_level += 1
+    elif decide == "b":
+      print("bad choice")
+      dialogue_level_down()
+      print(test_dude.level)
+    elif relationship_level <= 25:
+      print("test")
