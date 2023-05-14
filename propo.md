@@ -5,7 +5,7 @@ School setting
 Talk with characters (Dialogue options)
 Classes
 Hangouts
-A life simulator, quite like persona where you can talk and build relationships with characters. Most conversations will include dialogue options that result in either strengthening the bond or worsening. The game takes place in a school meaning that classes can also be attended.
+A life simulator, quite like persona; an rpg with a heavy focus on dialogue, where you can talk and build relationships with characters in a school setting. Most conversations will include dialogue options that result in either strengthening the bond or worsening. The game takes place in a school meaning that classes can also be attended.
 
 Must haves:
 At Least 3 characters to interact with
