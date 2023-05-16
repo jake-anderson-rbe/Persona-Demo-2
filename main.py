@@ -1,4 +1,5 @@
 import visual
+import sys
 import testmap
 from test import Character
 from tkinter import *
@@ -12,8 +13,22 @@ def dialogue_level_up():
 def dialogue_level_down():
   test_dude.level -= 1
 
+def LilDicky():
+  print("< Lil Dicky >")
+  print('"Hello [Basic Human Name Here], my name is Lil Dicky. Want to have a conversation?"')
+  action_input = input("yes or no? > ")
+  if action_input == "yes":
+    if test_dude.level <= 24:
+      dialogue_test()
+      print("Test")
+    else:
+     print('"Oh, it seems we are already best friends. Why not go talk with the others?"')
+     travel()     
+  elif action_input == "no":
+    print('"Alright, maybe another time!"')
+    travel()
+
 def travel():
-      print('"Alright, maybe another time!"')
       print("\nyou can go to:")
       for school_location in testmap.school_locations:
         print(school_location)
@@ -22,6 +37,10 @@ def travel():
       if movement_input == "1st floor":
         for first_location in testmap.first_locations:
           print(first_location)
+        movement_input = input("where do you go? ")
+        if movement_input == "room 1":
+          LilDicky()
+  
       elif movement_input == "2nd floor":
         for second_location in testmap.second_locations:
           print(second_location)
@@ -40,17 +59,5 @@ def dialogue_test():
 
 # Test Main
 print("Welcome To School")
+visual.entrance_image()
 travel()
-  print("< Lil Dicky >")
-  print('"Hello [Basic Human Name Here], my name is Lil Dicky. Want to have a conversation?"')
-  action_input = input("yes or no? > ")
-  if action_input == "yes":
-    if test_dude.level <= 24:
-      dialogue_test()
-      print("Test")
-    else:
-      print('"Oh, it seems we are already best friends. Why not go talk with the others?"')
-    travel()
-        
-  elif action_input == "no":
-    travel()
