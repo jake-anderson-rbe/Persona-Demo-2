@@ -1,32 +1,54 @@
 import visual
+import random
 import sys
 import testmap
+import functions
 from test import Character
 from tkinter import *
-#import test
+import conversation
+from conversation import lanaone
+from conversation import lanatwo
+from conversation import lanathree
+ # Defs
+Rooms = ("Talk", "Attend Class", "Leave")
 
-test_dude = Character("Lil Dicky", "16", "Male", 23)
+#def dialogue_level_up():
+  #test_dude.level += 1
+#def dialogue_level_down():
+  #test_dude.level -= 1
 
-def dialogue_level_up():
-  test_dude.level += 1
 
-def dialogue_level_down():
-  test_dude.level -= 1
-
-def LilDicky():
-  print("< Lil Dicky >")
-  print('"Hello [Basic Human Name Here], my name is Lil Dicky. Want to have a conversation?"')
-  action_input = input("yes or no? > ")
-  if action_input == "yes":
-    if test_dude.level <= 24:
-      dialogue_test()
-      print("Test")
-    else:
-     print('"Oh, it seems we are already best friends. Why not go talk with the others?"')
-     travel()     
-  elif action_input == "no":
-    print('"Alright, maybe another time!"')
+def art():
+  print(f"\n{testmap.Art.discription}")
+  print(f"You see {testmap.Art.character}")
+  for decide in Rooms:
+    print(f"{decide}")
+  decide_input = input("\nWhat do you do?:")
+  if decide_input == "Talk":
+    result = random.randint(1, 1)
+    if result == 1:
+      lanaone()
+    if result == 2:
+      lanatwo()
+    if result == 3:
+      lanathree()
+  #elif decide_input == "Attend Class":
+    #classes()
+  elif decide_input == "Leave":
     travel()
+def math():
+  print(f"{testmap.Math.discription}")
+  print(f"You see {testmap.Math.character}")
+def social():
+  print(f"{testmap.Social.discription}")
+  print(f"You see {testmap.Social.character}")
+def science():
+  print(f"{testmap.Science.discription}")
+  print(f"You see {testmap.Science.character}")
+def ela():
+  print(f"{testmap.ELA.discription}")
+  print(f"You see {testmap.ELA.character}")
+
 
 def travel():
       print("\nyou can go to:")
@@ -38,26 +60,25 @@ def travel():
         for first_location in testmap.first_locations:
           print(first_location)
         movement_input = input("where do you go? ")
-        if movement_input == "room 1":
-          LilDicky()
-  
-      elif movement_input == "2nd floor":
-        for second_location in testmap.second_locations:
-          print(second_location)
+        if movement_input == "Math":
+          math()
+        if movement_input == "Social":
+          social()
+        if movement_input == "Art":
+          art()
 
-def dialogue_test():
-    decide = input("a or b? ")
-    if decide == "a":
-      print("good choice")
-      dialogue_level_up()
-      print(test_dude.level)
-    elif decide == "b":
-      print("bad choice")
-      dialogue_level_down()
-      print(test_dude.level)
+      if movement_input == "2nd floor":
+        for first_location in testmap.first_locations:
+          print(first_location)
+        movement_input = input("where do you go? ")
+        if movement_input == "ELA":
+          ela()
+        if movement_input == "Science":
+          science()
+
+
 
 
 # Test Main
-print("Welcome To School")
-visual.entrance_image()
+print("Welcome to School")
 travel()
