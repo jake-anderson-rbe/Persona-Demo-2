@@ -1,10 +1,15 @@
+from profiles import *
+# Lana------------------------------------------------------------------------------
+#LanaOne
 def lanaone():
-  print("O-Oh, hello. I dont really have much to say... Could you leave me alone?")
+  print("\nO-Oh, hello. I dont really have much to say... Could you leave me alone?")
   options = ("1) Are you okay?", "2) Alright.", "3) Did I do somthing wrong?")
-  print(f"{options}")
-  option_input = input("\n?:")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
   if option_input == "1":
     print("""
+    
     Huh? I-I... I am okay.
     *People dont usually ask me that*
     I just dont know how to converse with others
@@ -12,22 +17,265 @@ def lanaone():
     """)
   if option_input == "3":
     print("""
+    
     No! Of course not! I... 
     I just dont know how to converse with others
     Now, could you Leave please?
     """)
+    profiles.Lana.level - 1
   if option_input == "2":
-    Travel()
+    print("You quietly exit the room.")
+#LanaOne
 
+#LanaTwo
 def lanatwo():
   print("""
-  I might need to look at another tutorial... should I shade this? 
-  where is the light coming from? 
-  Oh! I didnt see you... Um... please dont scare me like that.
-  """)
+  
 
+  """)
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("""
+    
+    
+    """)
+#LanaTwo
+
+#LanaThree    
 def lanathree():
   print("""
-  Could you not stare at me, please.
-  Oh, you were looking at my painting.
+  
+
   """)
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("""
+    
+    
+    """)
+#LanaThree
+ # Lana-----------------------------------------------------------------------------
+
+    
+ # Sid------------------------------------------------------------------------------
+#SidOne
+def sidone():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#SidOne
+
+#SidTwo
+def sidtwo():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#SidTwo
+
+#SidThree
+def sidthree():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#SidThree
+ # Sid------------------------------------------------------------------------------
+
+
+ # Connor---------------------------------------------------------------------------
+#ConnorOne
+def connorone():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#ConnorOne
+
+#ConnorTwo
+def connertwo():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#ConnorTwo
+
+#ConnorThree
+def connorthree():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#ConnorThree
+ # Connor---------------------------------------------------------------------------
+
+
+ # Stephen--------------------------------------------------------------------------
+#StephenOne
+def stephenone():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenOne
+
+#StephenTwo
+def stephentwo():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenTwo
+
+#StephenThree
+def stephenthree():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenThree
+ # Stephen--------------------------------------------------------------------------

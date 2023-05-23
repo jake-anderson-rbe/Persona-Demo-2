@@ -1,3 +1,18 @@
+from conversation import lanaone
+from conversation import lanatwo
+from conversation import lanathree
+from conversation import sidone
+from conversation import sidtwo
+from conversation import sidthree
+from conversation import connorone
+from conversation import connortwo
+from conversation import connorthree
+from conversation import stephenone
+from conversation import stephentwo
+from conversation import stephenthree
+
+
+
 school_locations = {"1st Floor", "2nd Floor", "Yard", "Roof"}
 first_locations = {"Art", "Math", "Social"}
 second_locations = {"ELA", "Science",}
@@ -65,4 +80,97 @@ def dialogue_test():
     print("bad choice")
     dialogue_level_down()
     print(test_dude.level)
-      
+
+
+ # Lana------------------------------------------------------------------------------
+#LanaOne
+def lanaone():
+  print("\nO-Oh, hello. I dont really have much to say... Could you leave me alone?")
+  options = ("1) Are you okay?", "2) Alright.", "3) Did I do somthing wrong?")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    Huh? I-I... I am okay.
+    *People dont usually ask me that*
+    I just dont know how to converse with others
+    Now, could you Leave please?
+    """)
+  if option_input == "3":
+    print("""
+    
+    No! Of course not! I... 
+    I just dont know how to converse with others
+    Now, could you Leave please?
+    """)
+  if option_input == "2":
+    print("You quietly exit the Art room.")
+#LanaOne
+
+
+ # Stephen--------------------------------------------------------------------------
+#StephenOne
+def stephenone():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenOne
+
+#StephenTwo
+def stephentwo():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenTwo
+
+#StephenThree
+def stephenthree():
+  print("\n")
+  options = ("1) ", "2) ", "3) ")
+  for options in options:
+    print(f"{options}")
+  option_input = input("\n?: ")
+  if option_input == "1":
+    print("""
+    
+    
+    """)
+  if option_input == "2":
+    print("""
+    
+    
+    """)
+  if option_input == "3":
+    print("")
+#StephenThree
+ # Stephen--------------------------------------------------------------------------
