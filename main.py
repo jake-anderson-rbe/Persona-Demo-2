@@ -9,7 +9,7 @@ import conversation
 
 
  # Defs
-Rooms = ("Talk", "Attend Class", "Leave")
+#Rooms = ("Talk", "Attend Class", "Leave")
 
 
 
@@ -17,7 +17,7 @@ Rooms = ("Talk", "Attend Class", "Leave")
 def art():
   print(f"\n{testmap.Art.discription}")
   print(f"You see {testmap.Art.character} painting in a corner.")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -37,7 +37,7 @@ def art():
 def math():
   print(f"{testmap.Math.discription}")
   print(f"You see {testmap.Math.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -57,7 +57,7 @@ def math():
 def social():
   print(f"{testmap.Social.discription}")
   print(f"You see {testmap.Social.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -77,7 +77,7 @@ def social():
 def science():
   print(f"{testmap.Science.discription}")
   print(f"You see {testmap.Science.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -97,7 +97,7 @@ def science():
 def gym():
   print(f"{testmap.Gym.discription}")
   print(f"You see {testmap.Gym.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -117,7 +117,7 @@ def gym():
 def pool():
   print(f"{testmap.Pool.discription}")
   print(f"You see {testmap.Pool.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -137,7 +137,7 @@ def pool():
 def ela():
   print(f"{testmap.ELA.discription}")
   print(f"You see {testmap.ELA.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -167,7 +167,7 @@ def ela():
 def club():
   print(f"{testmap.Club.discription}")
   print(f"You see {testmap.Club.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
@@ -197,7 +197,7 @@ def club():
 def track():
   print(f"{testmap.Track.discription}")
   print(f"You see {testmap.Track.character}")
-  for decide in Rooms:
+  for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":

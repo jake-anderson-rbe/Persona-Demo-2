@@ -1,4 +1,5 @@
 from profiles import *
+Rooms = ("Talk", "Attend Class", "Leave")
 # Lana------------------------------------------------------------------------------
 #LanaOne
 def lanaone():
