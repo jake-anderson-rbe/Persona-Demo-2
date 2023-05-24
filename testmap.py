@@ -1,4 +1,4 @@
-school_locations = {"1st Floor", "2nd Floor", "Yard", "Roof"}
+school_locations = {"1st Floor", "2nd Floor", "Yard"}
 first_locations = {"Art", "Math", "Social"}
 second_locations = {"ELA", "Science",}
 yard_locations = {"Track Field", "Pool", "Gym", "Club Building"}
@@ -30,7 +30,7 @@ ELA = Rooms("ELA", """
 Unlike the other normal rooms, the ELA classroom is more of a lecture hall.
 The students here all sit patiently and quietly while waiting for the teacher,
 or they are struggling to get last minute work done.
-""", "Sid, Lana")
+""", "Sid and Lana")
 Science = Rooms("Science", """
 A normally sized room, but there are no chairs or desks.
 instead, this room has six quartz tables that take up the centre of the room.
@@ -39,7 +39,7 @@ students prepair safety gear and start cleaning some of the messes the last clas
 Track = Rooms("Track Field", """
 A large 400m Track spans around a football field.
 Not many students are here, but as for the ones who are, they sit on the bleachers or are runing around the track.
-""", "Connor, Stephen")
+""", "Connor and Stephen")
 Pool = Rooms("Pool", """
 A 25 yard long pool takes up the inside of a glassroofed buildiung.
 To no ones surprise, the students here are happily swimming or racing one another.
@@ -54,7 +54,7 @@ Club = Rooms("Club Building", """
 Small building dissconected from  the right side of the school.
 This building is practically just a small school building, with classrooms and everything.
 You would enter a classroom to see what the students are doing, but you dont want to disturb the clubs.
-""", "Lana, Sid")
+""", "Lana and Sid")
 
 
 #class Outdoors:

@@ -5,7 +5,8 @@ import testmap
 import functions
 from tkinter import *
 import conversation
-
+import profiles
+import attendclass
 
 
  # Defs
@@ -21,15 +22,12 @@ def art():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      lanaone()
-    if result == 2:
-      lanatwo()
-    if result == 3:
-      lanathree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Lana.level == 0:
+      lanaintro()
+    #if profiles.Lana.level >= 1:
+      
+  elif decide_input == "Attend Class":
+    attendart()
   elif decide_input == "Leave":
     travel()
     
@@ -41,15 +39,11 @@ def math():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      connorone()
-    if result == 2:
-      connortwo()
-    if result == 3:
-      connorthree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Connor.level == 7:
+      connorintro()
+    #if profiles.Connor.level >= 8:
+  elif decide_input == "Attend Class":
+    attendmath()
   elif decide_input == "Leave":
     travel()
     
@@ -61,15 +55,11 @@ def social():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      lanaone()
-    if result == 2:
-      lanatwo()
-    if result == 3:
-      lanathree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Lana.level == 0:
+      lanaintro()
+    #if profiles.Lana.level >= 1:
+  elif decide_input == "Attend Class":
+    attendsocial()
   elif decide_input == "Leave":
     travel()
 
@@ -81,15 +71,11 @@ def science():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      stephenone()
-    if result == 2:
-      stephentwo()
-    if result == 3:
-      stephenthree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Stephen.level == 3:
+      stephenintro()
+    #if profiles.Stephen.level >= 4:
+  elif decide_input == "Attend Class":
+    attendscience()
   elif decide_input == "Leave":
     travel()
 
@@ -101,15 +87,11 @@ def gym():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      connorone()
-    if result == 2:
-      connortwo()
-    if result == 3:
-      connorthree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Connor.level == 7:
+      connorintro()
+    #if profiles.Connor.level >= 8:
+  elif decide_input == "Attend Class":
+    attendgym()
   elif decide_input == "Leave":
     travel()
     
@@ -121,15 +103,11 @@ def pool():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-    result = random.randint(1, 3)
-    if result == 1:
-      sidone()
-    if result == 2:
-      sidtwo()
-    if result == 3:
-      sidthree()
-  #elif decide_input == "Attend Class":
-    #classes()
+    if profiles.Sid.level == 15:
+      sidintro()
+    #if profiles.Sid.level >= 16:
+  elif decide_input == "Attend Class":
+    attendpool()
   elif decide_input == "Leave":
     travel()
 
@@ -143,23 +121,16 @@ def ela():
   if decide_input == "Talk":
     characterchosen = input("Who do you want to talk to? :")
     if characterchosen == "Sid":
-      result = random.randint(1, 3)
-      if result == 1:
-        sidone()
-      if result == 2:
-        sidtwo()
-      if result == 3:
-        sidthree()
+      if profiles.Sid.level == 15:
+        sidintro()
+      #if profiles.Sid.level >= 16:
+        
     if characterchosen == "Lana":
-      result = random.randint(1, 3)
-      if result == 1:
-        lanaone()
-      if result == 2:
-        lanatwo()
-      if result == 3:
-        lanathree()
-  #elif decide_input == "Attend Class":
-    #classes()
+      if profiles.Lana.level == 0:
+        lanaintro()
+      #if profiles.Lana.level >= 1:
+  elif decide_input == "Attend Class":
+    attendela()
   elif decide_input == "Leave":
     travel()
 
@@ -173,23 +144,15 @@ def club():
   if decide_input == "Talk":
     characterchosen = input("Who do you want to talk to? :")
     if characterchosen == "Sid":
-      result = random.randint(1, 3)
-      if result == 1:
-        sidone()
-      if result == 2:
-        sidtwo()
-      if result == 3:
-        sidthree()
+      if profiles.Sid.level == 15:
+        sidintro()
     if characterchosen == "Lana":
-      result = random.randint(1, 3)
-      if result == 1:
-        lanaone()
-      if result == 2:
-        lanatwo()
-      if result == 3:
-        lanathree()
-  #elif decide_input == "Attend Class":
-    #classes()
+      if profiles.Lana.level == 0:
+        lanaintro()
+      #if profiles.Lana.level >= 1:
+
+  elif decide_input == "Attend Class":
+    attendclub()
   elif decide_input == "Leave":
     travel()
 
@@ -203,23 +166,16 @@ def track():
   if decide_input == "Talk":
     characterchosen = input("Who do you want to talk to? :")
     if characterchosen == "Stephen":
-      result = random.randint(1, 3)
-      if result == 1:
-        stephenone()
-      if result == 2:
-        stephentwo()
-      if result == 3:
-        stephenthree()
+      if profiles.stephen.level == 3:
+        stephenintro()
+      #if profiles.Lana.level >= 4:
     if characterchosen == "Connor":
-      result = random.randint(1, 3)
-      if result == 1:
-        connorone()
-      if result == 2:
-        connortwo()
-      if result == 3:
-        connorthree()
-  #elif decide_input == "Attend Class":
-    #classes()
+      if profiles.connor.level == 7:
+        connorintro()
+      #if profiles.Lana.level >= 8:
+  
+  elif decide_input == "Attend Class":
+    attendtrack()
   elif decide_input == "Leave":
     travel()
 
@@ -269,5 +225,6 @@ def travel():
 
 # Test Main
 print("Welcome to School")
+print("Objective: Make Friends")
 while True:
   travel()

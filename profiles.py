@@ -4,15 +4,15 @@ class Character:
     self.age = age
     self.gender = gender
     self.level = level
-Lana = Character("Lana", "", "Female", 0, """
+Lana = Character("Lana", "18", "Female", 0, """
 
 """)
-Sid = Character("Sid", "", "Male", 15, """
+Sid = Character("Sid", "16", "Male", 15, """
 
 """)
-Connor = Character("Connor", "", "Male", 7, """
+Connor = Character("Connor", "17", "Male", 7, """
 
 """)
-Stephen = Character("Stephen", "", "Male", 3, """
+Stephen = Character("Stephen", "16", "Male", 3, """
 
 """)
