@@ -6,8 +6,6 @@ import functions
 from tkinter import *
 import conversation
 import profiles
-import attendclass
-
 
  # Defs
 #Rooms = ("Talk", "Attend Class", "Leave")
@@ -24,7 +22,8 @@ def art():
   if decide_input == "Talk":
     if profiles.Lana.level == 0:
       lanaintro()
-    #if profiles.Lana.level >= 1:
+    if profiles.Lana.level >= 1:
+      lanaconvo()
       
   elif decide_input == "Attend Class":
     attendart()
@@ -41,7 +40,8 @@ def math():
   if decide_input == "Talk":
     if profiles.Connor.level == 7:
       connorintro()
-    #if profiles.Connor.level >= 8:
+    if profiles.Connor.level >= 8:
+      connorconvo()
   elif decide_input == "Attend Class":
     attendmath()
   elif decide_input == "Leave":
@@ -57,7 +57,8 @@ def social():
   if decide_input == "Talk":
     if profiles.Lana.level == 0:
       lanaintro()
-    #if profiles.Lana.level >= 1:
+    if profiles.Lana.level >= 1:
+      lanaconvo()
   elif decide_input == "Attend Class":
     attendsocial()
   elif decide_input == "Leave":
@@ -73,7 +74,8 @@ def science():
   if decide_input == "Talk":
     if profiles.Stephen.level == 3:
       stephenintro()
-    #if profiles.Stephen.level >= 4:
+    if profiles.Stephen.level >= 4:
+      stephenconvo()
   elif decide_input == "Attend Class":
     attendscience()
   elif decide_input == "Leave":
@@ -89,7 +91,8 @@ def gym():
   if decide_input == "Talk":
     if profiles.Connor.level == 7:
       connorintro()
-    #if profiles.Connor.level >= 8:
+    if profiles.Connor.level >= 8:
+      connorconvo()
   elif decide_input == "Attend Class":
     attendgym()
   elif decide_input == "Leave":
@@ -105,7 +108,8 @@ def pool():
   if decide_input == "Talk":
     if profiles.Sid.level == 15:
       sidintro()
-    #if profiles.Sid.level >= 16:
+    if profiles.Sid.level >= 16:
+      sidconvo()
   elif decide_input == "Attend Class":
     attendpool()
   elif decide_input == "Leave":
@@ -123,12 +127,13 @@ def ela():
     if characterchosen == "Sid":
       if profiles.Sid.level == 15:
         sidintro()
-      #if profiles.Sid.level >= 16:
-        
+      if profiles.Sid.level >= 16:
+        sidconvo()
     if characterchosen == "Lana":
       if profiles.Lana.level == 0:
         lanaintro()
-      #if profiles.Lana.level >= 1:
+      if profiles.Lana.level >= 1:
+        lanaconvo()
   elif decide_input == "Attend Class":
     attendela()
   elif decide_input == "Leave":
@@ -146,11 +151,13 @@ def club():
     if characterchosen == "Sid":
       if profiles.Sid.level == 15:
         sidintro()
+      if profiles.Sid.level >= 1:
+        sidconvo()
     if characterchosen == "Lana":
       if profiles.Lana.level == 0:
         lanaintro()
-      #if profiles.Lana.level >= 1:
-
+      if profiles.Lana.level >= 1:
+        lanaconvo()
   elif decide_input == "Attend Class":
     attendclub()
   elif decide_input == "Leave":
@@ -168,12 +175,13 @@ def track():
     if characterchosen == "Stephen":
       if profiles.stephen.level == 3:
         stephenintro()
-      #if profiles.Lana.level >= 4:
+      if profiles.Stephen.level >= 4:
+        stephenconvo()
     if characterchosen == "Connor":
       if profiles.connor.level == 7:
         connorintro()
-      #if profiles.Lana.level >= 8:
-  
+      if profiles.Connor.level >= 8:
+        connorconvo()
   elif decide_input == "Attend Class":
     attendtrack()
   elif decide_input == "Leave":
@@ -187,10 +195,11 @@ def travel():
       for school_location in testmap.school_locations:
         print(school_location)
       movement_input = input("where do you go? ")
-      print("\nyou can go to: ")
       if movement_input == "1st floor":
+        print("\nyou can go to:")
         for first_location in testmap.first_locations:
           print(first_location)
+
         movement_input = input("where do you go? ")
         if movement_input == "Math":
           math()
@@ -200,6 +209,7 @@ def travel():
           art()
 
       if movement_input == "2nd floor":
+        print("\nyou can go to:")
         for second_location in testmap.second_locations:
           print(second_location)
         movement_input = input("where do you go? ")
@@ -209,6 +219,7 @@ def travel():
           science()
 
       if movement_input == "Yard":
+        print("\nyou can go to:")
         for yard_location in testmap.yard_locations:
           print(yard_location)
         movement_input = input("where do you go? ")
@@ -221,10 +232,80 @@ def travel():
         if movement_input == "Track Field":
           track()
 
+      else:
+        print("You end up back at the entrance.")
 
 
+def attendart():
+  profiles.Lana.level += 2
+  print("""By showing interest in Lana's favorite class, you grew closer. 
+  [Relationship Increased By 2]""")
+def attendsocial():
+  profiles.Lana.level += 1
+  print("""Though reluctant to accept your help, Lana learned from you.
+  [Relationship Increased By 1]""")
+def attendscience():
+  profiles.Stephen.level += 0
+  print(""""You try to spend time with Stephen but he is too busy with a personal experiment.
+  [Relationship Did Not Increase]""")
+def attendela():
+  profiles.Lana.level += 1
+  profiles.Sid.level += 4
+  print("""You and Sid convinced Lana to join you for a short homework session after class.
+  [Lana Relationship Increaded By 1]
+  [Sid Relationship Increased By 4]""")
+def attendgym():
+  profiles.Connor.level += 2
+  print("""You, Connor and a few other students play basketball.
+  Luckily you were on a team with Connor.
+  You and Connor dominated the court.
+  [Relationship with Connor Increased By 2]""")
+def attendpool():
+  profiles.Sid.level += 2
+  print("""You and Sid have a few races in the pool.
+  He beat you 4 - 0.
+  [Relationship Increased By 2]
+  [Pride Decreased By 999]
+  """)
+def attendtrack():
+  profiles.Connor.level += 5
+  profiles.Stephen.level -= 2
+  print("""You and Connor try to cheer Stephen on as he runs around the track.
+  Connor and you had fun but Stephen was to exhausted to even talk.
+  [Stephen Relationship Decreased By 2]
+  [Connor Relationship Increased By 5]""")
+def attendmath():
+  profiles.Connor.level += 3
+  print("""Connor, to your surprise, was intensly listening to the lesson.
+  By helping him with the parts he didint understand, you grew closer.
+  [Relatinship Increased By 3""")
+def attendclub():
+  profiles.Sid.level -= 4
+  profiles.Lana.level += 2
+  print("""Sid sat bored out of his mind while you and Lana help the drama club paint posters for the upcoming play.
+  [Relationship With Sid Decreased By 4]
+  [Relationship With Lana Increased By 2]""")
+
+def tutorial():
+  print("\nYour old friend Sid approaches you")
+  tutorialinput = input("Do you want to talk with him? (Yes) (No):")
+  if tutorialinput == "Yes":
+    print("You go to meet Sid")
+
+
+  if tutorialinput == "No":
+    travel()
+    
 # Test Main
-print("Welcome to School")
-print("Objective: Make Friends")
+print("Welcome to HighSchool")
+print("You just transfered here as a 2nd year and know nobody here.")
+print("Except your best friend from elementary, Sid.")
+print("""But one friend isnt enough to get you through this battleground. 
+so why not go out and make some more""")
+print("\nObjective: Make Friends")
+
+tutorial()
+
+
 while True:
   travel()

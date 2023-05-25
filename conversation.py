@@ -24,8 +24,14 @@ He is often lost in a book
 """)
 
   # Converstaion
-  
-
+def lanaconvo():
+  ghjgkhjj  
+def sidconvo():
+  hfhgf
+def connorconvo():
+  fhghg
+def stephenconvo():
+  jgjgjhh
   
   # Max relationship
 

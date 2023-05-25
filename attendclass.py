@@ -1,9 +1,0 @@
-def attendart():
-def attendsocial():
-def attendscience():
-def attendela():
-def attendgym():
-def attendpool():
-def attendtrack():
-def attendmath():
-def attendclub():
