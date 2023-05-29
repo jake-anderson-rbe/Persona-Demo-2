@@ -1,4 +1,3 @@
-import visual
 import random
 import sys
 import testmap
@@ -259,7 +258,11 @@ def travel():
     print(f"{profiles.Lana.name}, {profiles.Lana.level}")
 
   elif movement_input == "debug":
-    art()
+    conversation.lanaintro()
+
+  elif movement_input == "debug 2":
+    print("lana intro complete")
+    profiles.Lana.intro += 1
   
   else:
     print("You end up back at the entrance.")
@@ -325,7 +328,7 @@ def attendclub():
 
 # Tutorial
 def tutorial():
-  print("\nYour old friend Sid approaches you")
+  print("\nYour old friend Sid approaches you\n")
   tutorialinput = input("Do you want to talk with him? (Yes) (No):")
   if tutorialinput == "Yes":
     print("You go to meet Sid")
