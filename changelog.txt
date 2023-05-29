@@ -1,6 +1,34 @@
 V0.1:
 - Started testing with the dialogue to relationship system. got basic concept down.
 - image system developed
-- 
+
+V0.2:
+- Added movement menu
+- Added characters to interact with
+- Fleshing out relationship system
+- Added different classes/rooms for characters
+- Images currently put on hold
+
+V0.3:
+- Added introduction for Lana (will be reused and edited for each character)
+- Added different "Attend Class" message in Art when you haven't met the character yet (will be reused and edited for each character)
+- Changed Art room text
+
+Things required for alpha:
+- conversations properly raise level
+- dialogue prints properly
+- dialogue changes after character is met
+- maybe test out hint system?
+- relationship maxes out properly
+
+Things required for beta:
+- end state
+- dialogue options unlock based on relationship level
+- have a basic school class system
+- fix images if possible
+- possibly give the player a specified time until the game ends
+- conversation topics can't be used again once used in a conversation
+
+probably best to spend monday-wednesday on any new additions, and spend rest on testing/polishing in time for the june 6th deadline -jake
 
 

@@ -10,7 +10,10 @@ from conversation import connorthree
 from conversation import stephenone
 from conversation import stephentwo
 from conversation import stephenthree
+see {testmap.Art.character} painting in a corner
 
+def lanaIntroEnd():
+   == 1
 
       result = random.randint(1, 3)
       if result == 1:
