@@ -7,9 +7,7 @@ V0.2:
 - Added characters to interact with
 - Fleshing out relationship system
 - Added different classes/rooms for characters
-- Images currently put on hold
-
-V0.3:
+- Images removed
 - Added introduction for Lana (will be reused and edited for each character)
 - Added different "Attend Class" message in Art when you haven't met the character yet (will be reused and edited for each character)
 - Changed Art room text

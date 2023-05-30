@@ -1,5 +1,6 @@
 import profiles
 import random
+import textwrap
 Rooms = ("Talk", "Attend Class", "Leave")
 
 #Introductions
@@ -8,19 +9,18 @@ def lanaintro():
   She is a bit spooked when she sees you.
   A: Are you ok?
   B: Am I getting in the way here?
-  C: What are you doing?
-  D: Leave\n""")
+  C: What are you doing?""")
   lana_introinput = input("Choose: ")
   if lana_introinput.lower() == "a":
     print('“I’m ok. Who are you?”')
+    lanaintro()
   elif lana_introinput.lower() == "b":
     print('"No, you are not, I dont think."')
   elif lana_introinput.lower() == "c":
     print('''“Oh, uh, I’m doing art, I guess."\n
     A: What are you painting?
     B: I like it!
-    C: Guess it looks ok…
-    D: Leave\n''')
+    C: Guess it looks ok…''')
     lana_introinput = input("Choose: ")
     if lana_introinput.lower() == "a":
       print('“Just a, uh, landscape.”')
@@ -54,8 +54,6 @@ def lanaintro():
       “Anyways, I have some stuff I need to work on.”
       You leave the room.''')
       profiles.Lana.intro += 1
-    elif lana_introinput == "d":
-      print('''You Leave The Room.''')
 def connorintro():
   print("""
 This is Connor.
@@ -79,17 +77,19 @@ def lanaconvo():
   while True:
     if lana_pickconvo == 0:
         print("You walk over and talk to Lana.")
-        print("- Talk about art")
-        print("- Talk about school")
-        print("- Talk about home")
-        print("- Talk about home")
-        print("- Leave")
-        lanaconvo_0 = input("choose: ")
+        print("A: Talk about art")
+        print("B: Talk about school")
+        print("C: Talk about home")
+        print("D: Talk about video games")
+        print("E: Leave")
+        lanaconvo_0 = input("Choose: ")
         if lanaconvo_0 == "a":
-          print("yeah")
+          print(textwrap.dedent("""You discuss art with Lana. 
+You think you could learn some art techniques from her… """))
           profiles.Lana.level += 1
         elif lanaconvo_0 == "b":
-          print("yeah")
+          print(textwrap.dedent("""You talk about how school is going. 
+Lana seems like she is barely listening."""))
           profiles.Lana.level += 1
         elif lanaconvo_0 == "c":
           print("yeah")
@@ -99,7 +99,7 @@ def lanaconvo():
             print("no")
             profiles.Lana.level -= 1
         elif lanaconvo_0 == "e":
-          print(test)
+          print("You leave.")
           break
     elif lana_pickconvo == 1:
       print("test 1")

@@ -6,6 +6,10 @@ from tkinter import *
 import conversation
 import profiles
 
+dayvalue = 0
+timevalue = 0
+timeuntilend = 6
+actionsleft = 3
 
 # Art Class
 def art():
@@ -209,7 +213,6 @@ def track():
     travel()
 
 
-
 #System for getting around
 def travel():
   print("\nyou can go to:")
@@ -266,6 +269,7 @@ def travel():
   
   else:
     print("You end up back at the entrance.")
+    travel()
 
 
 # Classes
@@ -350,12 +354,13 @@ def tutorial():
     You find yourself at the entrance of the school.
     Finally, you get some time to yourself.
     Time to officially start your school life!""")
+  
     
-    
-
   if tutorialinput == "No":
-    travel()
-    
+    print("\nYou spend the day wandering the halls")
+
+
+
 # Test Main
 print("Welcome to HighSchool")
 print("You just transfered here as a 2nd year and know nobody here.")
@@ -365,8 +370,22 @@ so why not go out and make some more""")
 print("\nObjective: Meet Fellow Students ")
 
 tutorial()
+timevalue += 3
 
-print("\nObjective: Make Friends")
+if timevalue == 3:
+  timeuntilend -= 1
+  print(f"""\nAfter a busy day at school, it seems time to head home.\n
+  You wake up the next day, ready for another day of school.
+  [Days Until Game Over = {timeuntilend}]\n
+  You arrive at the school gates""")
+  dayvalue += 1
+  timevalue -= 3
+    
+if dayvalue == 5:
+  print("")
 
 while True:
+  print("\nObjective: Make Friends")
   travel()
+  timevalue -= 1
+  print(f"You have {actionsleft} actions left.")
