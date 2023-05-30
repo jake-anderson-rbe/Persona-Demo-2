@@ -1,7 +1,6 @@
 import random
 import sys
-import testmap
-import functions
+import map
 from tkinter import *
 import conversation
 import profiles
@@ -53,8 +52,8 @@ def math():
     
 # Social Class
 def social():
-  print(f"{testmap.Social.discription}")
-  print(f"You see {testmap.Social.character}")
+  print(f"{map.Social.discription}")
+  print(f"You see {map.Social.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -73,8 +72,8 @@ def social():
 
 # Science Class
 def science():
-  print(f"{testmap.Science.discription}")
-  print(f"You see {testmap.Science.character}")
+  print(f"{map.Science.discription}")
+  print(f"You see {map.Science.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -92,8 +91,8 @@ def science():
 
 # Gym Class
 def gym():
-  print(f"{testmap.Gym.discription}")
-  print(f"You see {testmap.Gym.character}")
+  print(f"{map.Gym.discription}")
+  print(f"You see {map.Gym.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -111,8 +110,8 @@ def gym():
     
 # pool Class
 def pool():
-  print(f"{testmap.Pool.discription}")
-  print(f"You see {testmap.Pool.character}")
+  print(f"{map.Pool.discription}")
+  print(f"You see {map.Pool.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -130,8 +129,8 @@ def pool():
 
 # ELA Class
 def ela():
-  print(f"{testmap.ELA.discription}")
-  print(f"You see {testmap.ELA.character}")
+  print(f"{map.ELA.discription}")
+  print(f"You see {map.ELA.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -158,8 +157,8 @@ def ela():
 
 # Club Building Class
 def club():
-  print(f"{testmap.Club.discription}")
-  print(f"You see {testmap.Club.character}")
+  print(f"{map.Club.discription}")
+  print(f"You see {map.Club.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -186,8 +185,8 @@ def club():
 
 # Track Class
 def track():
-  print(f"{testmap.Track.discription}")
-  print(f"You see {testmap.Track.character}")
+  print(f"{map.Track.discription}")
+  print(f"You see {map.Track.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -216,12 +215,12 @@ def track():
 #System for getting around
 def travel():
   print("\nyou can go to:")
-  for school_location in testmap.school_locations:
+  for school_location in map.school_locations:
     print(school_location)
   movement_input = input("where do you go? ")
   if movement_input == "1st Floor":
     print("\nyou can go to:")
-    for first_location in testmap.first_locations:
+    for first_location in map.first_locations:
       print(first_location)
 
     movement_input = input("where do you go? ")
@@ -234,7 +233,7 @@ def travel():
 
   elif movement_input == "2nd Floor":
     print("\nyou can go to:")
-    for second_location in testmap.second_locations:
+    for second_location in map.second_locations:
       print(second_location)
     movement_input = input("where do you go? ")
     if movement_input == "ELA":
@@ -244,7 +243,7 @@ def travel():
 
   elif movement_input == "Yard":
     print("\nyou can go to:")
-    for yard_location in testmap.yard_locations:
+    for yard_location in map.yard_locations:
       print(yard_location)
     movement_input = input("where do you go? ")
     if movement_input == "Gym":
