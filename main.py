@@ -11,7 +11,7 @@ dayvalue = 0
 timevalue = 0
 timeuntilend = 6
 actionsleft = 3
-maxrelation = 2
+maxrelation = 25
 
 # Art Class
 def art():
@@ -396,27 +396,40 @@ if dayvalue == 6:
   print("""School ends.
 It was a short, but sweet adventure.
 You reconnected with an old friend, made some new ones and if you are especially unucky, lost one or two.
-Let us together see how you did""")
-  #if maxrelation in range(1 , 25):
-    #print(f"""Connor Relationship Level = {profiles.Connor.level}
-#Lana Relationship Level = {profiles.Lana.level}
-#Stephen Relationship Level = {profiles.Stephen.level}
-#Sid Relationship Level = {profiles.Sid.level}""")
-  #if maxrelation in range(26 , 50):
-#print(f"""Connor Relationship Level = {profiles.Connor.level}
-#Lana Relationship Level = {profiles.Lana.level}
-#Stephen Relationship Level = {profiles.Stephen.level}
-#Sid Relationship Level = {profiles.Sid.level}""")
-  #if maxrelation in range(1 , 15):
-#print(f"""Connor Relationship Level = {profiles.Connor.level}
-#Lana Relationship Level = {profiles.Lana.level}
-#Stephen Relationship Level = {profiles.Stephen.level}
-#Sid Relationship Level = {profiles.Sid.level}""")
-  # if maxrelation in range(16 , 20):
-#print(f"""Connor Relationship Level = {profiles.Connor.level}
-#Lana Relationship Level = {profiles.Lana.level}
-#Stephen Relationship Level = {profiles.Stephen.level}
-#Sid Relationship Level = {profiles.Sid.level}""")
+Let us together see how you did:\n""")
+  if maxrelation in range(1 , 25):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+Rank = 
+\nYou Either Did Nothing Or Made Enemys With Everyone!""")
+  if maxrelation in range(26 , 50):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+Rank = 
+\nGood Job, But It Could Have Been Better""")
+  if maxrelation in range(51 , 75):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+Rank = 
+\nYou Did Really Well! Why Not Try For The Max?""")
+  if maxrelation in range(76 , 100):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+Rank = 
+\nHow Did You Even Do That!?""")
+  
 
 while True:
   print("\nObjective: Make Friends")
