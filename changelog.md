@@ -3,13 +3,13 @@
 - Started testing with the dialogue to relationship system. got basic concept down.
 - image system developed
 
-## V.O.1.1 - 5/14/2023
+## VO.1.1 - 5/14/2023
 ### added
 - added basic action menu
 - added movement function (both are still very WIP)
 - added early relationship level code
 
-## V.02 - 5/30/2023
+## V0.2 - 5/30/2023
 
 ### Added
 Added movement/location menu
@@ -29,3 +29,18 @@ Renamed changelog.py to checklist.py, now has list of things needed for alpha/be
 ### Removed
 Image system was removed because code wouldn’t work with it, and it was too big to add within time limit
 Removed test.py
+
+## V0.2.1 - 5/31/2023
+
+### Added
+Added conversations to Lana and Sid
+Added day system (still WIP)
+Added end ranking system (still WIP)
+Added textwrap import to have text indent properly in console/gameplay
+
+### Changed
+Redid intro system to be simpler to squash bugs
+Edited some lines to be under 79 characters (dialogue strings)
+
+### Fixed
+Fixed some text strings not indenting correctly with textwrap import
