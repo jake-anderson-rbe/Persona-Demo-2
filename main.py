@@ -8,7 +8,7 @@ import profiles
 dayvalue = 0
 timevalue = 0
 timeuntilend = 6
-actionsleft = 4
+actionsleft = 3
 
 # Art Class
 def art():
