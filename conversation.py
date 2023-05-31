@@ -12,45 +12,45 @@ def lanaintro():
   C: What are you doing?""")
   lana_introinput = input("Choose: ")
   if lana_introinput.lower() == "a":
-    print('“I’m ok. Who are you?”')
+    print('\n“I’m ok. Who are you?”')
     lanaintro()
   elif lana_introinput.lower() == "b":
-    print('"No, you are not, I dont think."')
+    print('\n"No, you are not, I dont think."')
   elif lana_introinput.lower() == "c":
-    print('''“Oh, uh, I’m doing art, I guess."\n
+    print('''\n“Oh, uh, I’m doing art, I guess."\n
     A: What are you painting?
     B: I like it!
     C: Guess it looks ok…''')
     lana_introinput = input("Choose: ")
     if lana_introinput.lower() == "a":
-      print('“Just a, uh, landscape.”')
+      print('\n“Just a, uh, landscape.”')
     elif lana_introinput.lower() == "b":
-      print('“Oh!”')
-      print('''“I didn’t expect anyone would compliment my art…”
+      print('''\n“Oh! I didn’t expect anyone would compliment my art…”
       A: What is your name?
       B: You like to paint?
       C: Where'd you learn to paint?''')       
       lana_introinput = input("Choose: ")
       if lana_introinput.lower() == "a":
-        print('''“Uhm, it’s…Lana.”
+        print('''\n“Uhm, it’s…Lana.”
         “Anyways, I have some stuff I need to work on.”
         You leave the room.''')
         profiles.Lana.intro += 1
       
       elif lana_introinput.lower() == "b":
-        print('''“Yeah, I do. It’s nice.”
+        print('''\n“Yeah, I do. It’s nice.”
         “Anyways, I have some stuff I need to work on.”
         You leave the room.''')
         profiles.Lana.intro += 1
        
       elif lana_introinput.lower() == "c":
-        print('''“Uh, I’d rather not say.”
+        print('''\n“Uh, I’d rather not say.”
         “Anyways, I have some stuff I need to work on.”
         You leave the room.''')
         profiles.Lana.intro += 1
         
     elif lana_introinput == "c":
-      print('''"Yeah..."
+      print('''
+      "Yeah..."
       “Anyways, I have some stuff I need to work on.”
       You leave the room.''')
       profiles.Lana.intro += 1
@@ -74,26 +74,44 @@ Your bestfriend from Elementary
   # Converstaion
 def lanaconvo():
   lana_pickconvo = random.randint(0, 2)
+  print("You walk over and talk to Lana.")
   while True:
     if lana_pickconvo == 0:
-        print("You walk over and talk to Lana.")
-        print("A: Talk about art")
-        print("B: Talk about school")
-        print("C: Talk about home")
-        print("D: Talk about video games")
-        print("E: Leave")
+        print(textwrap.dedent("""A: Talk about art
+B: Talk about school
+C: Talk about home
+D: Talk about video games
+E: Leave"""))
         lanaconvo_0 = input("Choose: ")
         if lanaconvo_0 == "a":
           print(textwrap.dedent("""You discuss art with Lana. 
-You think you could learn some art techniques from her… """))
+You think you could learn some art techniques from her… 
+[Relationship Increased by 1"""))
           profiles.Lana.level += 1
         elif lanaconvo_0 == "b":
           print(textwrap.dedent("""You talk about how school is going. 
-Lana seems like she is barely listening."""))
+Lana seems like she is barely listening.
+[No Relationship Gain"""))
           profiles.Lana.level += 1
         elif lanaconvo_0 == "c":
-          print("yeah")
-          profiles.Lana.level += 1
+          if profiles.Lana.level <= 10:
+            print(textwrap.dedent("""You try to talk about your home life, 
+but Lana shoots you a glare.
+You may need to grow closer before talking about this.
+[Relationship Decresed by 1]"""))
+            profiles.Lana.level -= 1
+          elif profiles.Lana.level >= 10:
+            profiles.Lana.level += 4
+            print(textwrap.dedent("""You ask Lana about her home life. 
+She sighs.
+“I dunno. My parents aren’t the best.
+They all seem so focused on work and whatever new fad they’ve found.
+Usually, it’s like I’m a ghost to them. Like I don’t exist.”
+She sighs again, before looking up at you.
+“Oh, uh, I didn’t mean to get all that depressing.”
+She laughs to herself, and looks at you.
+“Either way, thanks for listening. I needed to get that off my chest.”
+[Relationship Increased by 4]"""))
         elif lanaconvo_0 == "d":
           if profiles.Lana.level <= 18:
             print("no")

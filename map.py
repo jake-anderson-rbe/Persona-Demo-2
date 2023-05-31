@@ -55,7 +55,3 @@ Small building dissconected from  the right side of the school.
 This building is practically just a small school building, with classrooms and everything.
 You would enter a classroom to see what the students are doing, but you dont want to disturb the clubs.
 """, "Lana and Sid")
-
-
-#class Outdoors:
-  #def __init__(self, location, discription, character)

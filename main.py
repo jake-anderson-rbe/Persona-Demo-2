@@ -4,15 +4,17 @@ import map
 from tkinter import *
 import conversation
 import profiles
+import textwrap
 
 dayvalue = 0
 timevalue = 0
 timeuntilend = 6
 actionsleft = 3
+maxrelation = 2
 
 # Art Class
 def art():
-  print(f"\n{testmap.Art.discription}")
+  print(f"\n{map.Art.discription}")
   print("You spot someone painting in the corner.")
   for decide in conversation.Rooms:
     print(f"{decide}")
@@ -22,8 +24,7 @@ def art():
       if profiles.Lana.level >= 1:
         conversation.lanaconvo()
       elif profiles.Lana.level >= 25:
-        print("You Already Reached Max Relationship Level With This Person")
-      
+        print("You Already Reached Max Relationship Level With This Person")    
   elif decide_input == "Attend Class":
     attendart1()
     if profiles.Lana.level >= 1:
@@ -33,8 +34,8 @@ def art():
     
 # Math Class
 def math():
-  print(f"{testmap.Math.discription}")
-  print(f"You see {testmap.Math.character}")
+  print(f"{map.Math.discription}")
+  print(f"You see {map.Math.character}")
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
@@ -63,8 +64,8 @@ def social():
     elif profiles.Lana.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
     elif profiles.Lana.intro == 0:
-      print("""She seems wary of you. 
-      Maybe talk to her when she is in a place more familiar to her.""")
+      print(textwrap.dedent("""She seems wary of you. 
+Maybe talk to her when she is in a place more familiar to her."""))
   elif decide_input == "Attend Class":
     attendsocial()
   elif decide_input == "Leave":
@@ -277,56 +278,63 @@ def attendart():
     print("You attend the class.")
   if conversation.lanaIntroEnd.complete == 1:
     profiles.Lana.level += 2
+    maxrelation += 2
     print("""By showing interest in Lana's favorite class, you grew closer. 
-    [Relationship Increased By 2]""")
+            [Relationship Increased By 2]""")
 def attendsocial():
   if conversation.lanaIntroEnd.complete == 0:
     print("You attend the class.")
   if conversation.lanaIntroEnd.complete == 1:
     profiles.Lana.level += 1
     print("""Though reluctant to accept your help, Lana learned from you.
-  [Relationship Increased By 1]""")
+            [Relationship Increased By 1]""")
 def attendscience():
   profiles.Stephen.level += 0
   print(""""You try to spend time with Stephen but he is too busy with a personal experiment.
-  [Relationship Did Not Increase]""")
+            [Relationship Did Not Increase]""")
 def attendela():
   profiles.Lana.level += 1
-  profiles.Lana.level += 4
+  profiles.Sid.level += 4
+  maxrelation += 5
   print("""You and Sid convinced Lana to join you for a short homework session after class.
-  [Lana Relationship Increaded By 1]
-  [Sid Relationship Increased By 4]""")
+            [Lana Relationship Increaded By 1]
+            [Sid Relationship Increased By 4]""")
 def attendgym():
   profiles.Connor.level += 2
-  print("""You, Connor and a few other students play basketball.
-  Luckily you were on a team with Connor.
-  You and Connor dominated the court.
-  [Relationship with Connor Increased By 2]""")
+  maxrelation += 2
+  print(textwrap.dedent("""You, Connor and a few other students play basketball.
+Luckily you were on a team with Connor.
+You and Connor dominated the court.
+            [Relationship with Connor Increased By 2]"""))
 def attendpool():
   profiles.Lana.level += 2
+  maxrelation += 2
   print("""You and Sid have a few races in the pool.
-  He beat you 4 - 0.
-  [Relationship Increased By 2]
-  [Pride Decreased By 999]
+He beat you 4 - 0.
+            [Relationship Increased By 2]
+            [Pride Decreased By 999]
   """)
 def attendtrack():
   profiles.Connor.level += 5
   profiles.Stephen.level -= 2
+  maxrelation += 3
   print("""You and Connor try to cheer Stephen on as he runs around the track.
-  Connor and you had fun but Stephen was to exhausted to even talk.
-  [Stephen Relationship Decreased By 2]
-  [Connor Relationship Increased By 5]""")
+Connor and you had fun but Stephen was to exhausted to even talk.
+            [Stephen Relationship Decreased By 2]
+            [Connor Relationship Increased By 5]""")
 def attendmath():
   profiles.Connor.level += 3
+  maxrelation += 3
   print("""Connor, to your surprise, was intensly listening to the lesson.
-  By helping him with the parts he didint understand, you grew closer.
-  [Relatinship Increased By 3""")
+By helping him with the parts he didint understand, you grew closer.
+            [Relatinship Increased By 3""")
 def attendclub():
   profiles.Lana.level -= 4
   profiles.Lana.level += 2
+  maxrelation -= 2
   print("""Sid sat bored out of his mind while you and Lana help the drama club paint posters for the upcoming play.
-  [Relationship With Sid Decreased By 4]
-  [Relationship With Lana Increased By 2]""")
+            [Relationship With Sid Decreased By 4]
+            [Relationship With Lana Increased By 2]""")
 
 
 # Tutorial
@@ -336,23 +344,23 @@ def tutorial():
   if tutorialinput == "Yes":
     print("You go to meet Sid")
     conversation.sidintro()
-    print("""You bid Sid goodbye and enter the school.
-    You enter the first class you see, art class.""")
+    print("""\nYou bid Sid goodbye and enter the school.
+You enter the first class you see, art class.""")
     art()
-    print("""The Bell signalling the end of class goes and you swiftly exit.
-    You get swept up in the crowd of kids.
-    Next thing you know, you are in a Gym""")
+    print("""\nThe Bell signalling the end of class goes and you swiftly exit.
+You get swept up in the crowd of kids.
+Next thing you know, you are in a Gym""")
     gym()
-    print("""You and Connor walk to the main building.
-    The moment you two enter, you are once again taken by a crowd.
-    you reach for Connors hand in the sea of students, but he is already gone.
-    Instead you grab hold of a... textbook!?
-    Welcome to math class.""")
+    print("""\nYou and Connor walk to the main building.
+The moment you two enter, you are once again taken by a crowd.
+you reach for Connors hand in the sea of students, but he is already gone.
+Instead you grab hold of a... textbook!?
+Welcome to math class.""")
     math()
-    print("""For the last time, you are swept up in a crowd as you exit class.
-    You find yourself at the entrance of the school.
-    Finally, you get some time to yourself.
-    Time to officially start your school life!""")
+    print("""\nFor the last time, you are swept up in a crowd as you exit class.
+You find yourself at the entrance of the school.
+Finally, you get some time to yourself.
+Time to officially start your school life!""")
   
     
   if tutorialinput == "No":
@@ -370,18 +378,45 @@ print("\nObjective: Meet Fellow Students ")
 
 tutorial()
 timevalue += 3
+actionsleft -= 3
 
 if timevalue == 3:
   timeuntilend -= 1
-  print(f"""\nAfter a busy day at school, it seems time to head home.\n
-  You wake up the next day, ready for another day of school.
-  [Days Until Game Over = {timeuntilend}]\n
-  You arrive at the school gates""")
+  print(f"""\nAfter a busy day at school, 
+it seems time to head home.\n
+You wake up the next day, ready for another day of school.
+          [Days Until Game Over = {timeuntilend}]\n
+You arrive at the school gates""")
   dayvalue += 1
   timevalue -= 3
+  actionsleft += 3
     
-if dayvalue == 5:
-  print("")
+if dayvalue == 6:
+  print("""School ends.
+It was a short, but sweet adventure.
+You reconnected with an old friend, made some new ones and if you are especially unucky, lost one or two.
+Let us together see how you did""")
+  if maxrelation in range(1 , 25):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}""")
+Total
+  #if maxrelation in range(26 , 50):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}""")
+  #if maxrelation in range(1 , 15):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}""")
+  if maxrelation in range(16 , 20):
+    print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}""")
 
 while True:
   print("\nObjective: Make Friends")
