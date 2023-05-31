@@ -29,6 +29,9 @@ Renamed changelog.py to checklist.py, now has list of things needed for alpha/be
 ### Removed
 Image system was removed because code wouldn’t work with it, and it was too big to add within time limit
 Removed test.py
+Removed functions.py
+Removed visual.py
+Removed images folder
 
 ## V0.2.1 - 5/31/2023
 
@@ -37,6 +40,7 @@ Added conversations to Lana and Sid
 Added day system (still WIP)
 Added end ranking system (still WIP)
 Added textwrap import to have text indent properly in console/gameplay
+Added intros.py
 
 ### Changed
 Redid intro system to be simpler to squash bugs
