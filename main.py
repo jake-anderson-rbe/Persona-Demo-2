@@ -1,4 +1,5 @@
 import random
+import intros
 import sys
 import map
 from tkinter import *
@@ -20,7 +21,7 @@ def art():
     print(f"{decide}")
   decide_input = input("What do you do?: ")
   if decide_input == "Talk":
-      conversation.lanaintro()
+      intros.lanaintro_1()
       if profiles.Lana.level >= 1:
         conversation.lanaconvo()
       elif profiles.Lana.level >= 25:
@@ -396,27 +397,26 @@ if dayvalue == 6:
 It was a short, but sweet adventure.
 You reconnected with an old friend, made some new ones and if you are especially unucky, lost one or two.
 Let us together see how you did""")
-  if maxrelation in range(1 , 25):
-    print(f"""Connor Relationship Level = {profiles.Connor.level}
-Lana Relationship Level = {profiles.Lana.level}
-Stephen Relationship Level = {profiles.Stephen.level}
-Sid Relationship Level = {profiles.Sid.level}""")
-Total
+  #if maxrelation in range(1 , 25):
+    #print(f"""Connor Relationship Level = {profiles.Connor.level}
+#Lana Relationship Level = {profiles.Lana.level}
+#Stephen Relationship Level = {profiles.Stephen.level}
+#Sid Relationship Level = {profiles.Sid.level}""")
   #if maxrelation in range(26 , 50):
-    print(f"""Connor Relationship Level = {profiles.Connor.level}
-Lana Relationship Level = {profiles.Lana.level}
-Stephen Relationship Level = {profiles.Stephen.level}
-Sid Relationship Level = {profiles.Sid.level}""")
+#print(f"""Connor Relationship Level = {profiles.Connor.level}
+#Lana Relationship Level = {profiles.Lana.level}
+#Stephen Relationship Level = {profiles.Stephen.level}
+#Sid Relationship Level = {profiles.Sid.level}""")
   #if maxrelation in range(1 , 15):
-    print(f"""Connor Relationship Level = {profiles.Connor.level}
-Lana Relationship Level = {profiles.Lana.level}
-Stephen Relationship Level = {profiles.Stephen.level}
-Sid Relationship Level = {profiles.Sid.level}""")
-  if maxrelation in range(16 , 20):
-    print(f"""Connor Relationship Level = {profiles.Connor.level}
-Lana Relationship Level = {profiles.Lana.level}
-Stephen Relationship Level = {profiles.Stephen.level}
-Sid Relationship Level = {profiles.Sid.level}""")
+#print(f"""Connor Relationship Level = {profiles.Connor.level}
+#Lana Relationship Level = {profiles.Lana.level}
+#Stephen Relationship Level = {profiles.Stephen.level}
+#Sid Relationship Level = {profiles.Sid.level}""")
+  # if maxrelation in range(16 , 20):
+#print(f"""Connor Relationship Level = {profiles.Connor.level}
+#Lana Relationship Level = {profiles.Lana.level}
+#Stephen Relationship Level = {profiles.Stephen.level}
+#Sid Relationship Level = {profiles.Sid.level}""")
 
 while True:
   print("\nObjective: Make Friends")

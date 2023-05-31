@@ -167,62 +167,76 @@ She says she would like to be an illustrator.
 [Relationship Increased by 1]"""))
         profiles.Lana.level += 1
       elif lanaconvo_2 == "b":
-        print("yeah")
+        print(textwrap.dedent("""You ask Lana about any books she has read.
+She talks about one book where high school students pilot mech robots.
+[Relationship Increased by 1]"""))
         profiles.Lana.level += 1
       elif lanaconvo_2 == "c":
-        print("yeah")
+        print(textwrap.dedent("""You ask Lana about hobbies she has.
+She says she likes art, writing and video games.
+[No Relationship Gain]"""))
+      elif lanaconvo_2 == "c":
+        print(textwrap.dedent("""You ask Lana about any shows she's watched.
+She talks about a show where teenagers solve mysteries.
+[Relationship Increased by 1]"""))
         profiles.Lana.level += 1
 def sidconvo():
     sid_pickconvo = random.randint(0, 2)
+    print("You talk to Sid.")
     if sid_pickconvo == 0:
-      print("test 0")
-      print("- option a")
-      print("- option b")
-      print("- option c")
-      print("- option d")
+      print(textwrap.dedent("""A: Talk about school
+B: Talk about work
+C: Talk about romance
+D: Talk about TV"""))
       sidconvo_0 = input("choose: ")
       if sidconvo_0 == "a":
-        print("yeah")
+        print(textwrap.dedent("""You discuss school with Sid.
+He complains about the larger workload,
+while talking about how he doesn’t like the teachers.
+[Relationship Increased by 1]"""))
         profiles.Sid.level += 1
       elif sidconvo_0 == "b":
-        print("yeah")
-        profiles.Sid.level += 1
+        print(textwrap.dedent("""You ask if Sid has been looking at any jobs.
+He states that he’s been applying everywhere, but hasn’t had any luck.
+[No Relationship Gain]"""))
       elif sidconvo_0 == "c":
-        print("yeah")
+        print(textwrap.dedent("""You ask Sid if he’s had any luck with the ladies. 
+He slyly smirks at you.
+[Relationship Increased by 1]"""))
         profiles.Sid.level += 1
       elif sidconvo_0 == "d":
-        if profiles.Sid.level <= 18:
-          print("no")
+        print(textwrap.dedent("""You ask Sid about any shows he’s watched. 
+He talks about this one show where 4 guys in New York compete 
+to pull jokes on people in public. 
+[Relationship Increased by 1]"""))
+        profiles.Sid.level += 1
     elif sid_pickconvo == 1:
-      print("test 1")
-      print("- option a")
-      print("- option b")
-      print("- option c")
+      print(textwrap.dedent("""A: Talk about gossip
+B: Talk about jokes
+C: Talk about family
+D: Talk about old friends"""))
       sidconvo_1 = input("choose: ")
       if sidconvo_1 == "a":
-        print("yeah")
-        profiles.Sid.level += 1
+        print(textwrap.dedent("""You ask if Sid has heard any rumors going around. 
+He says that he’s heard a rumor that some kids have been jumping into TVs. 
+You aren’t quite sure if he’s being honest or not.
+[No Relationship Gain]"""))
       elif sidconvo_1 == "b":
-        print("yeah")
+        print(textwrap.dedent("""You ask Sid about any jokes he’s heard. 
+He tells you a joke about a chicken crossing the road. 
+Said chicken gets run over by a semi-truck. 
+[Relationship Increased by 1]"""))
         profiles.Sid.level += 1
       elif sidconvo_1 == "c":
-        print("yeah")
+        print(textwrap.dedent("""You discuss family with Sid.
+He says that his parents left town for a “business trip”.
+He seems excited to have the whole house to himself.
+[Relationship Increased by 1]"""))
         profiles.Sid.level += 1
-    elif sid_pickconvo == 2:
-      print("test 2")
-      print("- option a")
-      print("- option b")
-      print("- option c")
-      sidconvo_2 = input("choose: ")
-      if sidconvo_2 == "a":
-        print("yeah")
-        profiles.Sid.level += 1
-      elif sidconvo_2 == "b":
-        print("yeah")
-        profiles.Sid.level += 1
-      elif sidconvo_2 == "c":
-        print("yeah")
-        profiles.Sid.level += 1
+      elif sidconvo_1 == "d":
+        print(textwrap.dedent("""You ask Sid about anyone from elementary school. 
+He talks about this one girl who started her own punk rock band.
+[No Relationship Gain]"""))
 def connorconvo():
   fhghg
 def stephenconvo():
