@@ -92,13 +92,12 @@ You think you could learn some art techniques from her…
           print(textwrap.dedent("""You talk about how school is going. 
 Lana seems like she is barely listening.
 [No Relationship Gain"""))
-          profiles.Lana.level += 1
         elif lanaconvo_0 == "c":
           if profiles.Lana.level <= 10:
             print(textwrap.dedent("""You try to talk about your home life, 
 but Lana shoots you a glare.
 You may need to grow closer before talking about this.
-[Relationship Decresed by 1]"""))
+[Relationship Decreased by 1]"""))
             profiles.Lana.level -= 1
           elif profiles.Lana.level >= 10:
             profiles.Lana.level += 4
@@ -113,36 +112,59 @@ She laughs to herself, and looks at you.
 “Either way, thanks for listening. I needed to get that off my chest.”
 [Relationship Increased by 4]"""))
         elif lanaconvo_0 == "d":
-          if profiles.Lana.level <= 18:
-            print("no")
-            profiles.Lana.level -= 1
+          print(textwrap.dedent("""You talk about a new game that came out. 
+Lana seems interested.
+[Relationship Increased by 1]"""))
+          profiles.Lana.level += 1
         elif lanaconvo_0 == "e":
           print("You leave.")
           break
     elif lana_pickconvo == 1:
-      print("test 1")
-      print("- option a")
-      print("- option b")
-      print("- option c")
+      print(textwrap.dedent("""A: Talk about homework
+B: Talk about local events
+C: Talk about gossip
+D: Talk about family"""))
       lanaconvo_1 = input("choose: ")
       if lanaconvo_1 == "a":
-        print("yeah")
-        profiles.Lana.level += 1
+        print(textwrap.dedent("""You talk about some homework you have been assigned.
+She seems sympathetic but uninterested.
+[No Relationship Gain]"""))
       elif lanaconvo_1 == "b":
-        print("yeah")
+        print(textwrap.dedent("""You talk about an event that’s happening soon. 
+Lana seems somewhat curious.
+[Relationship Increased by 1]"""))
         profiles.Lana.level += 1
       elif lanaconvo_1 == "c":
-        print("yeah")
-        break
-        profiles.Lana.level += 1
+        print(textwrap.dedent("""You ask Lana if she’s heard any gossip around school.
+She does mention that she heard rumors about a couple that split up recently.
+[No Relationship Gain]"""))
+      elif lanaconvo_1 == "d":
+        if profiles.Lana.level <= 15:
+          print(textwrap.dedent("""You try to talk about your family,
+  but Lana seems a bit down when you mention it.
+  You may need to grow closer before talking about this.
+  [Relationship Decreased by 1"""))
+          profiles.Lana.level -= 1
+        elif profiles.Lana.level >= 15:
+          print(textwrap.dedent("""You talk about your family, 
+and Lana looks at you, then speaks:
+“I wish my family was like that. My dad is usually too drunk to stand. 
+He yells a lot, too…”
+She looks down at the floor.
+“Hopefully, I can move out one day. Do my own thing. That’d be nice.”
+She looks at you again.
+“Maybe we can still keep in touch then.”
+[Relationship Increased by 4"""))
     elif lana_pickconvo == 2:
-      print("test 2")
-      print("- option a")
-      print("- option b")
-      print("- option c")
+      print(textwrap.dedent("""A: Talk about aspirations
+B: Talk about books
+C: Talk about hobbies
+D: Talk about TV"""))
       lanaconvo_2 = input("choose: ")
-      if lanaconvo == "a":
-        print("yeah")
+      if lanaconvo_2 == "a":
+        print(textwrap.dedent("""You ask Lana if she has aspirations for the future.
+She says she would like to be an illustrator.
+[Relationship Increased by 1]"""))
         profiles.Lana.level += 1
       elif lanaconvo_2 == "b":
         print("yeah")
