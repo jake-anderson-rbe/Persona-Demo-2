@@ -34,7 +34,6 @@ def art():
       print("You Already Reached Max Relationship Level With This Person")    
   elif decide_input == "Attend Class":
     classes.attendart()
-    maxrelation += 2
   elif decide_input == "Leave":
     travel()    
   # Math Class
@@ -53,7 +52,6 @@ def math():
       print("You Already Reached Max Relationship Level With This Person")
   elif decide_input == "Attend Class":
     classes.attendmath()
-    maxrelation += 3
   elif decide_input == "Leave":
     travel()    
   # Social Class
