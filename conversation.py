@@ -141,9 +141,9 @@ She does mention that she heard rumors about a couple that split up recently.
       elif lanaconvo_1 == "d":
         if profiles.Lana.level <= 15:
           print(textwrap.dedent("""You try to talk about your family,
-  but Lana seems a bit down when you mention it.
-  You may need to grow closer before talking about this.
-  [Relationship Decreased by 1"""))
+but Lana seems a bit down when you mention it.
+You may need to grow closer before talking about this.
+[Relationship Decreased by 1]"""))
           profiles.Lana.level -= 1
         elif profiles.Lana.level >= 15:
           print(textwrap.dedent("""You talk about your family, 
@@ -175,7 +175,7 @@ She talks about one book where high school students pilot mech robots.
         print(textwrap.dedent("""You ask Lana about hobbies she has.
 She says she likes art, writing and video games.
 [No Relationship Gain]"""))
-      elif lanaconvo_2 == "c":
+      elif lanaconvo_2 == "d":
         print(textwrap.dedent("""You ask Lana about any shows she's watched.
 She talks about a show where teenagers solve mysteries.
 [Relationship Increased by 1]"""))

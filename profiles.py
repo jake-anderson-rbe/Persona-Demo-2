@@ -8,12 +8,12 @@ class Character:
 Lana = Character("Lana", "18", "Female", 0, """
 
 """, 0)
-Sid = Character("Sid", "16", "Male", 15, """
+Sid = Character("Sid", "16", "Male", 0, """
 
 """, 0)
-Connor = Character("Connor", "17", "Male", 7, """
+Connor = Character("Connor", "17", "Male", 0, """
 
 """, 0)
-Stephen = Character("Stephen", "16", "Male", 3, """
+Stephen = Character("Stephen", "16", "Male", 0, """
 
 """, 0)
