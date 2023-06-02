@@ -19,10 +19,10 @@ Inorder to use this small space, students have moved the chairs and desks to the
 in place of where these school essentials are stools and canvases.
 """, 'Lana')
 Math = Rooms("Math", """
-A normal class room, that is if you look past all the students that are outwardly expressing their distane for this class.
+A normal classroom, that is if you look past all the students that are outwardly expressing their distane for this class.
 """, "Connor")
 Social = Rooms("Social", """
-A medium sized class room.
+A medium sized classroom.
 A giant map of the world and a much smaller map of europe hang behind the teacher podium.
 The students in this class are either chearfully talking to friends or furiously writing in notebooks, studying the maps.
 """, "Lana")
