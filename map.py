@@ -1,4 +1,4 @@
-school_locations = {"1st Floor", "2nd Floor", "Yard", "Check Relationships"}
+school_locations = {"1st Floor", "2nd Floor", "Yard"}
 first_locations = {"Art", "Math", "Social"}
 second_locations = {"ELA", "Science",}
 yard_locations = {"Track Field", "Pool", "Gym", "Club Building"}

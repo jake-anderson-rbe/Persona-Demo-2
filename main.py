@@ -1,11 +1,8 @@
-import random
 import intros
 import sys
 import map
-from tkinter import *
 import conversation
 import profiles
-import textwrap
 import classes
 
 dayvalue = 0
@@ -35,7 +32,7 @@ def art():
   elif decide_input == "Attend Class":
     classes.attendart()
   elif decide_input == "Leave":
-    travel()    
+    menu()    
   # Math Class
 def math():
   print(f"{map.Math.discription}")
@@ -53,7 +50,7 @@ def math():
   elif decide_input == "Attend Class":
     classes.attendmath()
   elif decide_input == "Leave":
-    travel()    
+    menu()   
   # Social Class
 def social():
   print(f"{map.Social.discription}")
@@ -72,7 +69,7 @@ Maybe talk to her when she is in a place more familiar to her.""")
   elif decide_input == "Attend Class":
     classes.attendsocial()
   elif decide_input == "Leave":
-    travel()
+    menu()
   # Science Class
 def science():
   print(f"{map.Science.discription}")
@@ -90,7 +87,7 @@ def science():
   elif decide_input == "Attend Class":
     classes.attendscience()
   elif decide_input == "Leave":
-    travel()
+    menu()
   # Gym Class
 def gym():
   print(f"{map.Gym.discription}")
@@ -108,7 +105,7 @@ def gym():
   elif decide_input == "Attend Class":
     classes.attendgym()
   elif decide_input == "Leave":
-    travel()   
+    menu()   
   # pool Class
 def pool():
   print(f"{map.Pool.discription}")
@@ -126,7 +123,7 @@ def pool():
   elif decide_input == "Attend Class":
     classes.attendpool()
   elif decide_input == "Leave":
-    travel()
+    menu()
   # ELA Class
 def ela():
   print(f"{map.ELA.discription}")
@@ -153,7 +150,7 @@ def ela():
   elif decide_input == "Attend Class":
     classes.attendela()
   elif decide_input == "Leave":
-    travel()
+    menu()
   # Club Building Class
 def club():
   print(f"{map.Club.discription}")
@@ -180,7 +177,7 @@ def club():
   elif decide_input == "Attend Class":
     classes.attendclub()
   elif decide_input == "Leave":
-    travel()
+    menu()
   # Track Class
 def track():
   print(f"{map.Track.discription}")
@@ -207,7 +204,7 @@ def track():
   elif decide_input == "Attend Class":
     classes.attendtrack()
   elif decide_input == "Leave":
-    travel()
+    menu()
 
 
 
@@ -318,6 +315,7 @@ def travel():
   print("\nyou can go to:")
   for school_location in map.school_locations:
     print(school_location)
+  print("Menu")
   movement_input = input("where do you go? ")
   # First Floor Options
   if movement_input == "1st Floor":
@@ -355,13 +353,9 @@ def travel():
       pool()
     if movement_input == "Track Field":
       track()
+  elif movement_input == "Menu":
+    menu()
   # Aditional Relation Check Option
-  elif movement_input == "Check Relationships":
-    print(f"{profiles.Lana.name}, Level: {profiles.Lana.level}")
-    print(f"{profiles.Connor.name}, Level:{profiles.Connor.level}")
-    print(f"{profiles.Sid.name}, Level: {profiles.Sid.level}")
-    print(f"{profiles.Stephen.name}, Level: {profiles.Stephen.level}")
-    travel()
   elif movement_input == "debug":
     conversation.lanaintro()
   elif movement_input == "debug 2":
@@ -375,12 +369,33 @@ def travel():
     travel()
 
 
+# Menu
+def menu():
+  print("""\nWhat would you like to do?
+- Move
+- Check Relationships
+- Quit""")
+  menu_input = input("Choose: ")
+  if menu_input.lower() == "move":
+    travel()
+  elif menu_input.lower() == "check relationships":
+      print(f"""{profiles.Lana.name}, Level: {profiles.Lana.level}""")
+      print(f"""{profiles.Connor.name}, Level:{profiles.Connor.level}""")
+      print(f"""{profiles.Sid.name}, Level: {profiles.Sid.level}""")
+      print(f"""{profiles.Stephen.name}, Level: {profiles.Stephen.level}""")
+      menu()
+  elif menu_input.lower() == "quit":
+      print("Goodbye!")
+      sys.exit()
+  else:
+    print("Incorrect input!")
+    menu()
 
 
 # Main
 while True:
   print("\nObjective: Make Friends")
-  travel()
   timevalue += 1
   actionsleft -= 1
-  print(f"You have {actionsleft} actions left.")
+  menu()
+  print(f"\nYou have {actionsleft} actions left.")

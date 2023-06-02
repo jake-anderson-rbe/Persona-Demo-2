@@ -141,3 +141,40 @@ You need to chin up, at least for the ladies.”"""))
          print(textwrap.dedent("""“Huh? What do you mean by ‘changed’?
 Y'know what, it's fine.”"""))
          sidintro_2()
+
+def stephenintro_end():
+  print(textwrap.dedent("""“I don’t mean to be rude, but could you go? 
+I need to finish all of this.””"""))
+  print("You leave the room.")
+  profiles.Stephen.intro += 1
+
+def stephenintro_2():
+  print(textwrap.dedent("""A: I like math too.
+B: You studying?
+C: You sure you don’t need any help?"""))       
+  connor_introinput = input("Choose: ")
+  if connor_introinput.lower() == "a":
+        print(textwrap.dedent("""“Oh, you do? That’s neat!”"""))
+        stephenintro_end()
+  elif connor_introinput.lower() == "b":
+         print(textwrap.dedent("""“No, I’m just doing this for fun.”"""))
+         stephenintro_end()
+  elif connor_introinput.lower() == "c":
+         print(textwrap.dedent("""“Dude, it’s ok, I’m fine.”"""))
+         stephenintro_end()
+
+def stephenintro_1():
+  print(textwrap.dedent("""A: What are you doing?
+B: That looks hard!
+C: Uh, do you need any help?"""))       
+  connor_introinput = input("Choose: ")
+  if connor_introinput.lower() == "a":
+        print(textwrap.dedent("""“Math, pythagorean theorem specifically.”"""))
+        stephenintro_2()
+  elif connor_introinput.lower() == "b":
+         print(textwrap.dedent("""“I mean, it really isn’t. 
+When you know what you’re doing.”"""))
+         stephenintro_2()
+  elif connor_introinput.lower() == "c":
+         print(textwrap.dedent("""“Nope.”"""))
+         stephenintro_2()
