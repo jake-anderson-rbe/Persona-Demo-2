@@ -48,3 +48,23 @@ Edited some lines to be under 79 characters (dialogue strings)
 
 ### Fixed
 Fixed some text strings not indenting correctly with textwrap import
+
+## V0.3 (Alpha) - 6/3/2023
+
+### Added
+Added intro to Stephen and Sid
+Added conversations to Connor and Stephen
+Added menu for movement, hints, relationships and quitting
+Added classes.py
+Added messages when relationship is maxed out
+Added different text when you interact with a character without yet meeting them
+
+### Changed
+Unlocked dialogue options can no longer be used multiple times
+Attend class functions moved to classes.py
+
+### Removed
+Removed textwrap since it wasn't needed
+
+### Fixed
+Fixed bug in testing where entering Talk wouldn't print out conversation text

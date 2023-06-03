@@ -4,17 +4,17 @@ import profiles
 # Defs For Each Of The Classes
   # Art
 def attendart():
-  if conversation.lanaIntroEnd.intro == 0:
+  if profiles.lana.intro == 0:
     print("You attend the class.")
-  if conversation.lanaIntroEnd.intro == 1:
+  if profiles.Lana.intro == 1:
     profiles.Lana.level += 2
     print("""By showing interest in Lana's favorite class, you grew closer. 
 [Relationship Increased By 2]""")
   # Social
 def attendsocial():
-  if profiles.lanaIntroEnd.intro == 0:
+  if profiles.Lana.intro == 0:
     print("You attend the class.")
-  if profiles.lanaIntroEnd.intro == 1:
+  if profiles.Lana.intro == 1:
     profiles.Lana.level += 1
     print("""Though reluctant to accept your help, Lana learned from you.
 [Relationship Increased By 1]""")

@@ -57,10 +57,10 @@ C: Guess it looks ok…""")
 
 def lanaintro_1():
   print("""\nYou see a girl with a short, black haircut and a tomboyish outfit.
-  She is a bit spooked when she sees you.
-  A: Are you ok?
-  B: Am I getting in the way here?
-  C: What are you doing?""")
+She is a bit spooked when she sees you.
+A: Are you ok?
+B: Am I getting in the way here?
+C: What are you doing?""")
   lana_introinput = input("Choose: ")
   if lana_introinput.lower() == "a":
     print('\n“I’m ok. Who are you?”')
