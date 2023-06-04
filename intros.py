@@ -39,6 +39,10 @@ C: Where'd you learn to paint?""")
   elif lana_introinput.lower() == "c":
         print('''\n“Uh, I’d rather not say.”''')
         lanaintro_end()
+  else:
+        print("Invalid input!")
+        lanaintro_3()
+    
     
 def lanaintro_2():
   print("""A: What are you painting?
@@ -51,9 +55,12 @@ C: Guess it looks ok…""")
   elif lana_introinput.lower() == "b":
       print('''\n“Oh! I didn’t expect anyone would compliment my art…”''')
       lanaintro_3()
-  elif lana_introinput == "c":
+  elif lana_introinput.lower() == "c":
       print("Yeah...")
       lanaintro_3()
+  else:
+      print("Invalid input!")
+      lanaintro_2()
 
 def lanaintro_1():
   print("""\nYou see a girl with a short, black haircut and a tomboyish outfit.
@@ -71,6 +78,9 @@ C: What are you doing?""")
   elif lana_introinput.lower() == "c":
     print('''\n“Oh, uh, I’m doing art, I guess."\n''')
     lanaintro_2()
+  else:
+      print("Invalid input!")
+      lanaintro_1()
 
 def connorintro_end():
   print("""“Well, I got a game to practice for.
@@ -94,6 +104,9 @@ but right now, there’s not much.” ''')
   elif connor_introinput.lower() == "c":
          print('''“In your dreams, buddy.”''')
          connorintro_end()
+  else:
+      print("Invalid input!")
+      connorintro_2()
 
 def connorintro_1():
   print("""You enter the gym, 
@@ -115,6 +128,9 @@ C: What are you doing?""")
 We have a big game coming up soon.
 I’m making sure I won’t lose.”''')
          connorintro_2()
+  else:
+      print("Invalid input!")
+      connorintro_1()
 
 def sidintro_end():
   print('''“Well, would you look at the time.
@@ -138,6 +154,9 @@ there’s a lot of cool stuff here.” ''')
 You really gotta get your head out of the gutter. 
 You don’t wanna be a buzzkill!” ''')
         sidintro_end()
+  else:
+      print("Invalid input!")
+      sidintro_2()
 
 def sidintro_1():
   print('''As you enter the school,
@@ -160,6 +179,9 @@ You need to chin up, at least for the ladies.”''')
          print('''“Huh? What do you mean by ‘changed’?
 Y'know what, it's fine.”''')
          sidintro_2()
+  else:
+      print("Invalid input!")
+      sidintro_1()
 
 def stephenintro_end():
   print('''“I don’t mean to be rude, but could you go? 
@@ -171,29 +193,35 @@ def stephenintro_2():
   print("""A: I like math too.
 B: You studying?
 C: You sure you don’t need any help?""")
-  connor_introinput = input("Choose: ")
-  if connor_introinput.lower() == "a":
+  stephen_introinput = input("Choose: ")
+  if stephen_introinput.lower() == "a":
         print('''“Oh, you do? That’s neat!”''')
         stephenintro_end()
-  elif connor_introinput.lower() == "b":
+  elif stephen_introinput.lower() == "b":
          print('''“No, I’m just doing this for fun.”''')
          stephenintro_end()
-  elif connor_introinput.lower() == "c":
+  elif stephen_introinput.lower() == "c":
          print('''“Dude, it’s ok, I’m fine.”''')
          stephenintro_end()
+  else:
+         print("Invalid input!")
+         stephenintro_2()
 
 def stephenintro_1():
   print("""A: What are you doing?
 B: That looks hard!
 C: Uh, do you need any help?""")
-  connor_introinput = input("Choose: ")
-  if connor_introinput.lower() == "a":
+  stephen_introinput = input("Choose: ")
+  if stephen_introinput.lower() == "a":
         print('''“Math, pythagorean theorem specifically.”''')
         stephenintro_2()
-  elif connor_introinput.lower() == "b":
+  elif stephen_introinput.lower() == "b":
          print('''“I mean, it really isn’t. 
 When you know what you’re doing.”''')
          stephenintro_2()
-  elif connor_introinput.lower() == "c":
+  elif stephen_introinput.lower() == "c":
          print('''“Nope.”''')
          stephenintro_2()
+  else:
+         print("Invalid input!")
+         stephenintro_1()

@@ -68,3 +68,19 @@ Removed textwrap since it wasn't needed
 
 ### Fixed
 Fixed bug in testing where entering Talk wouldn't print out conversation text
+
+## V0.4 (Beta) - 6/3/2023
+
+### Added
+Added messages for incorrect inputs
+Added different attend class messages for all classes if character is not met
+
+### Changed
+Action count per day has been bumped up to 5 (from tester feedback)
+Finished end ranking system
+Finished day system
+
+### Fixed
+Fixed issue where days would go into the negatives
+Fixed issue where typing in capital letters in some instances would give an error
+Fixed parts of code where Lana was referenced instead of Sid

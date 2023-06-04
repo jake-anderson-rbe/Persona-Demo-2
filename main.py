@@ -7,7 +7,7 @@ import classes
 import random
 
 timeuntilend = 6
-actionsleft = 3
+actionsleft = 5
 maxrelation = 25
 
 
@@ -24,7 +24,7 @@ def art():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     if profiles.Lana.intro == 0:
       intros.lanaintro_1()
     elif profiles.Lana.intro == 1:
@@ -32,9 +32,9 @@ def art():
     elif profiles.Lana.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
       menu()
-  elif decide_input == "Attend Class":
+  elif decide_input == "attend class":
     classes.attendart()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()    
   # Math Class
 def math():
@@ -43,7 +43,7 @@ def math():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     if profiles.Connor.intro == 0:
       print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
@@ -52,9 +52,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
     elif profiles.Connor.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
       menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendmath()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()   
   # Social Class
 def social():
@@ -63,7 +63,7 @@ def social():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     if profiles.Lana.intro == 0:
       print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
@@ -72,9 +72,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
     if profiles.Lana.level == 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendsocial()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
   # Science Class
 def science():
@@ -83,7 +83,7 @@ def science():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     if profiles.Stephen.intro == 0:
        print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
@@ -92,9 +92,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
     elif profiles.Stephen.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
       menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend xlass":
     classes.attendscience()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
   # Gym Class
 def gym():
@@ -106,7 +106,7 @@ def gym():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     if profiles.Connor.intro == 0:
       conversation.connorintro()
     elif profiles.Connor.intro == 1:
@@ -114,9 +114,9 @@ def gym():
     elif profiles.Connor.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
       menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendgym()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()   
   # pool Class
 def pool():
@@ -125,15 +125,15 @@ def pool():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
-    if profiles.Lana.level == 1:
+  if decide_input.lower() == "talk":
+    if profiles.Sid.level == 1:
       conversation.sidconvo()
-    elif profiles.Lana.level >= 25:
+    elif profiles.Sid.level >= 25:
       print("You Already Reached Max Relationship Level With This Person")
       menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendpool()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
   # ELA Class
 def ela():
@@ -142,15 +142,15 @@ def ela():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     characterchosen = input("Who do you want to talk to? :")
-    if characterchosen == "Sid":
+    if characterchosen.lower() == "sid":
       if profiles.Sid.level == 1:
         conversation.sidconvo()
       elif profiles.Sid.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-    if characterchosen == "Lana":
+    if characterchosen.lower() == "lana":
       if profiles.Lana.intro == 0:
          print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
@@ -159,9 +159,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Lana.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendela()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
   # Club Building Class
 def club():
@@ -170,15 +170,15 @@ def club():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     characterchosen = input("Who do you want to talk to? :")
-    if characterchosen == "Sid":
+    if characterchosen.lower() == "sid":
       if profiles.Sid.intro == 1:
         conversation.sidconvo()
       elif profiles.Sid.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-    if characterchosen == "Lana":
+    if characterchosen.lower() == "lana":
       if profiles.Lana.intro == 0:
          print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
@@ -187,9 +187,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Lana.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendclub()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
   # Track Class
 def track():
@@ -198,10 +198,10 @@ def track():
   for decide in conversation.Rooms:
     print(f"{decide}")
   decide_input = input("What do you do?: ")
-  if decide_input == "Talk":
+  if decide_input.lower() == "talk":
     characterchosen = input("Who do you want to talk to? :")
-    if characterchosen == "Stephen":
-      if profiles.stephen.intro == 0:
+    if characterchosen.lower() == "stephen":
+      if profiles.Stephen.intro == 0:
          print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Stephen.intro == 1:
@@ -209,8 +209,8 @@ Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Stephen.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-    if characterchosen == "Connor":
-      if profiles.connor.intro == 0:
+    if characterchosen.lower() == "connor":
+      if profiles.Connor.intro == 0:
          print("""They seem wary of you. 
 Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Connor.intro >= 1:
@@ -218,9 +218,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
       elif profiles.Connor.level >= 25:
         print("You Already Reached Max Relationship Level With This Person")
         menu()
-  elif decide_input == "Attend Class":
+  elif decide_input.lower() == "attend class":
     classes.attendtrack()
-  elif decide_input == "Leave":
+  elif decide_input.lower() == "leave":
     menu()
 
 
@@ -231,7 +231,7 @@ def tutorial():
   print("\nYour old friend Sid approaches you\n")
   tutorialinput = input("Do you want to talk with him? (Yes) (No):")
   # Decide To Do Tutorial
-  if tutorialinput == "Yes":
+  if tutorialinput.lower() == "yes":
     print("You go to meet Sid")
     conversation.sidintro()
     print("""\nYou bid Sid goodbye and enter the school.
@@ -252,7 +252,7 @@ You find yourself at the entrance of the school.
 Finally, you get some time to yourself.
 Time to officially start your school life!""")
   # Decide Not To Do Tutorial:
-  elif tutorialinput == "No":
+  elif tutorialinput.lower() == "no":
     print("\nYou spend the day wandering the halls")
     profiles.Lana.level += 1
     profiles.Connor.level += 7
@@ -271,7 +271,7 @@ print("\nObjective: Meet Fellow Students ")
 
 # Starting and Ending Tutorial
 tutorial()
-actionsleft -= 3
+actionsleft -= 5
 
 # Day Ends, Activities and Ending
   # No More Actions + Day Reset
@@ -282,7 +282,7 @@ it seems time to head home.\n
 You wake up the next day, ready for another day of school.
 [Days Until Game Over = {timeuntilend}]\n
 You arrive at the school gates""")
-  actionsleft += 3 
+  actionsleft += 5 
   # Time Limit Ends + End Of Game
 if timeuntilend == 0:
   print("""School ends.
@@ -336,42 +336,42 @@ def travel():
     print(school_location)
   movement_input = input("where do you go? ")
   # First Floor Options
-  if movement_input == "1st Floor":
+  if movement_input.lower() == "1st floor":
     print("\nyou can go to:")
     for first_location in map.first_locations:
       print(first_location)
     movement_input = input("where do you go? ")
-    if movement_input == "Math":
+    if movement_input.lower() == "math":
       math()
-    if movement_input == "Social":
+    if movement_input.lower() == "social":
       social()
-    if movement_input == "Art":
+    if movement_input.lower() == "art":
       art()
   # Second Floor Options
-  elif movement_input == "2nd Floor":
+  elif movement_input.lower() == "2nd floor":
     print("\nyou can go to:")
     for second_location in map.second_locations:
       print(second_location)
     movement_input = input("where do you go? ")
-    if movement_input == "ELA":
+    if movement_input.lower() == "ela":
       ela()
-    if movement_input == "Science":
+    if movement_input.lower() == "science":
       science()
   # Yard Options
-  elif movement_input == "Yard":
+  elif movement_input.lower() == "yard":
     print("\nyou can go to:")
     for yard_location in map.yard_locations:
       print(yard_location)
     movement_input = input("where do you go? ")
-    if movement_input == "Gym":
+    if movement_input.lower() == "gym":
       gym()
-    if movement_input == "Club Building":
+    if movement_input.lower() == "club building":
       club()
-    if movement_input == "Pool":
+    if movement_input.lower() == "pool":
       pool()
-    if movement_input == "Track Field":
+    if movement_input.lower() == "track field":
       track()
-  elif movement_input == "Menu":
+  elif movement_input.lower() == "menu":
     menu()
 
   # Error Message
@@ -389,15 +389,15 @@ def menu():
 - Hints
 - Quit""")
   menu_input = input("Choose: ")
-  if menu_input == "Move":
+  if menu_input.lower() == "move":
     travel()
-  elif menu_input == "Check Relationships":
+  elif menu_input.lower() == "check relationships":
       print(f"""{profiles.Lana.name}, Level: {profiles.Lana.level}
 {profiles.Connor.name}, Level:{profiles.Connor.level}
 {profiles.Sid.name}, Level: {profiles.Sid.level}
 {profiles.Stephen.name}, Level: {profiles.Stephen.level}""")
       menu()
-  elif menu_input == "Hints":
+  elif menu_input.lower() == "hints":
     hint_selection = random.randint(0, 4)
     if hint_selection == 0:
       print("""If a character’s relationship level goes down in a conversation,
@@ -422,9 +422,13 @@ where they are more comfortable.""")
 while giving you more relationship levels, 
 can only be used once.""")
       menu()
-  elif menu_input == "Quit":
+  elif menu_input.lower() == "quit":
       print("Goodbye!")
       sys.exit()
+  elif menu_input == "lana test":
+      print("lana intro complete")
+      profiles.Lana.intro += 1
+      menu()
   else:
     print("Incorrect input!")
     menu()
@@ -444,13 +448,53 @@ elif profiles.Stephen.level == 10:
  # Loop Main
 while True:
   print("\nObjective: Make Friends")
-  actionsleft -= 1
   menu()
   print(f"\nYou have {actionsleft} actions left.")
   if actionsleft == 0:
     print("""The day is over, and you return home.
 ***
 You return the next day.""")
-    actionsleft += 3
+    actionsleft += 5
     timeuntilend -= 1
     print(f"[Days Left: {timeuntilend}]")
+  if timeuntilend == 0:
+    print("""School ends.
+It was a short, but sweet adventure.
+You reconnected with an old friend, made some new ones and if you are especially unucky, lost one or two.
+Let us together see how you did:\n""")
+    if maxrelation in range(0 , 26):
+      print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+\nRank = F
+\nYou Either Did Nothing Or Made Enemys With Everyone!""")
+      sys.exit()
+    if maxrelation in range(25 , 51):
+      print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+\nRank = C
+\nGood Job, But It Could Have Been Better""")
+      sys.exit()
+    if maxrelation in range(50 , 76):
+      print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+\nRank = B
+\nYou Did Really Well! Why Not Try For The Max?""")
+      sys.exit()
+    if maxrelation in range(75 , 101):
+      print(f"""Connor Relationship Level = {profiles.Connor.level}
+Lana Relationship Level = {profiles.Lana.level}
+Stephen Relationship Level = {profiles.Stephen.level}
+Sid Relationship Level = {profiles.Sid.level}
+Total Relationship Level = {maxrelation} / 100
+\nRank = *A*
+\nHow Did You Even Do That!?""")
+      sys.exit()
