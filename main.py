@@ -9,13 +9,17 @@ import tutorial
 
 
 timeuntilend = 6
+# Number of days before the game ends
 actionsleft = 5
+# Number of actions/things a player can do in a day
 maxrelation = 25
+# The max relationship level limit for each character
 
 
 # Each Class
   # Art Class
 def art():
+    ""
     print(f"\n{map.Art.discription}")
     if profiles.Lana.intro == 0:
         print("You spot someone painting in the corner.")
@@ -36,9 +40,13 @@ def art():
         classes.attendart()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      art()
       
   # Math Class
 def math():
+    """Code for when the player is in the Math room"""
     print(f"{map.Math.discription}")
     print(f"You see {map.Math.character}")
     for decide in conversation.Rooms:
@@ -57,7 +65,10 @@ Maybe talk to them when they are in a place more familiar to them.""")
     elif decide_input.lower() == "attend class":
         classes.attendmath()
     elif decide_input.lower() == "leave":
-        menu() 
+        menu()
+    else:
+      print("Inncorect Input!")
+      math()
       
   # Social Class
 def social():
@@ -80,6 +91,9 @@ Maybe talk to them when they are in a place more familiar to them.""")
         classes.attendsocial()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      social()
       
   # Science Class
 def science():
@@ -100,6 +114,9 @@ def science():
         classes.attendscience()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      science()
       
   # Gym Class
 def gym():
@@ -124,6 +141,9 @@ def gym():
         classes.attendgym()
     elif decide_input.lower() == "leave":
         menu()   
+    else:
+      print("Inncorect Input!")
+      gym()
       
   # pool Class
 def pool():
@@ -142,6 +162,9 @@ def pool():
         classes.attendpool()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      pool()
       
   # ELA Class
 def ela():
@@ -168,10 +191,16 @@ Maybe talk to them when they are in a place more familiar to them.""")
             elif profiles.Lana.level >= 25:
                 print("You Already Reached Max Relationship Level With This Person")
                 menu()
+        else:
+          print("Inncorect Input!")
+          ela()
     elif decide_input.lower() == "attend class":
         classes.attendela()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      ela()
       
   # Club Building Class
 def club():
@@ -198,10 +227,16 @@ Maybe talk to them when they are in a place more familiar to them.""")
             elif profiles.Lana.level >= 25:
                 print("You Already Reached Max Relationship Level With This Person")
                 menu()
+        else:
+          print("Inncorect Input!")
+          club()
     elif decide_input.lower() == "attend class":
         classes.attendclub()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      club()
       
   # Track Class
 def track():
@@ -232,10 +267,16 @@ Maybe talk to them when they are in a place more familiar to them.""")
             elif profiles.Connor.level >= 25:
                 print("You Already Reached Max Relationship Level With This Person")
                 menu()
+        else:
+          print("Inncorect Input!")
+          track()
     elif decide_input.lower() == "attend class":
         classes.attendtrack()
     elif decide_input.lower() == "leave":
         menu()
+    else:
+      print("Inncorect Input!")
+      track()
 
 
 # Tutorial Main
@@ -307,6 +348,8 @@ Total Relationship Level = {maxrelation} / 100
 
 # System for getting around
 def travel():
+    """Function that prints a movement menu,
+    to get to the different places around the school"""
     print("\nyou can go to:")
     for school_location in map.school_locations:
         print(school_location)
@@ -362,6 +405,8 @@ def travel():
 # Main
   # Menu
 def menu():
+    """Basic main menu, player will come back to this
+    menu after any action"""
     print("""\nWhat would you like to do?
 - Move
 - Check Relationships
@@ -371,12 +416,15 @@ def menu():
     if menu_input.lower() == "move":
         travel()
     elif menu_input.lower() == "check relationships":
+        # Prints all of the characters and their relationship level
         print(f"""{profiles.Lana.name}, Level: {profiles.Lana.level}
 {profiles.Connor.name}, Level:{profiles.Connor.level}
 {profiles.Sid.name}, Level: {profiles.Sid.level}
 {profiles.Stephen.name}, Level: {profiles.Stephen.level}""")
         menu()
     elif menu_input.lower() == "hints":
+        # Randomly chooses from 5 different hints regarding
+        # the game to help the player
         hint_selection = random.randint(0, 4)
         if hint_selection == 0:
             print("""If a character’s relationship level goes down in a conversation,
@@ -402,6 +450,7 @@ while giving you more relationship levels,
 can only be used once.""")
             menu()
     elif menu_input.lower() == "quit":
+        """Quits the game"""
         print("Goodbye!")
         sys.exit()
     elif menu_input == "lana test":
@@ -414,6 +463,9 @@ can only be used once.""")
 
       
   # Relation Growth Notif
+  # Will print when you reach a relationship level
+  # that unlocks a locked conversation topic
+  # with a character
 if profiles.Lana.level == 10:
     print("You have become a lot closer to Lana.")
 if profiles.Lana.level == 15:

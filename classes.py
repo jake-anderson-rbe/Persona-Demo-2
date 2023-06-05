@@ -3,30 +3,41 @@ import profiles
 # Defs For Each Of The Classes
   # Art
 def attendart():
+    """Code for when attend class function is used
+    in the Art area"""
     if profiles.lana.intro == 0:
         print("You attend the class.")
     if profiles.Lana.intro == 1:
         print("""By showing interest in Lana's favorite class, you grew closer. 
 [Relationship Increased By 2]""")
         profiles.Lana.level += 2
+      
   # Social
 def attendsocial():
+    """Code for when attend class function is used
+    in the Social area"""
     if profiles.Lana.intro == 0:
         print("You attend the class.")
     if profiles.Lana.intro == 1:
         profiles.Lana.level += 1
         print("""Though reluctant to accept your help, Lana learned from you.
 [Relationship Increased By 1]""")
+      
   # Science
 def attendscience():
+    """Code for when attend class function is used
+    in the Science area"""
     if profiles.Stephen.intro == 0:
         print("You attend the class.")
     elif profiles.Stephen.intro == 1:
         print(""""You try to spend time with Stephen but he is too busy with a personal experiment.
 [Relationship Did Not Increase]""")
         profiles.Stephen.level += 0
+      
   # Ela
 def attendela():
+    """Code for when attend class function is used
+    in the ELA area"""
     if profiles.Lana.intro == 0:
         print("You attend the class.")
     elif profiles.Lana.intro == 1:        
@@ -48,15 +59,21 @@ Luckily you were on a team with Connor.
 You and Connor dominated the court.
 [Relationship with Connor Increased By 2]""")
         profiles.Connor.level += 2
+      
   # Pool
 def attendpool():
+    """Code for when attend class function is used
+    in the Pool area"""
     print("""You and Sid have a few races in the pool.
 He beat you 4 - 0.
 [Relationship Increased By 2]
 [Pride Decreased By 999]""")
     profiles.Sid.level += 2
+  
   # Track
 def attendtrack():
+    """Code for when attend class function is used
+    in the Track area"""
     if profiles.Connor.level == 0:
         print("You attend the class.")
     elif profiles.Stephen.level == 0:
@@ -68,14 +85,20 @@ Connor and you had fun but Stephen was too exhausted to even talk.
 [Connor Relationship Increased By 5]""")
         profiles.Connor.level += 5
         profiles.Stephen.level -= 2
+      
   # Math
 def attendmath():
+    """Code for when attend class function is used
+    in the Math area"""
     print("""Connor, to your surprise, was intensly listening to the lesson.
 By helping him with the parts he didint understand, you grew closer.
 [Relatinship Increased By 3""")
     profiles.Connor.level += 3
+  
   # Club
 def attendclub():
+    """Code for when attend class function is used
+    in the Club Building area"""
     if profiles.Lana.intro == 0:
         print("You attend the class.")
     elif profiles.Lana.intro == 1:

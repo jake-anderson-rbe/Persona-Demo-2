@@ -3,20 +3,29 @@ import random
 import textwrap
 Rooms = ("Talk", "Attend Class", "Leave")
 
+
 # Converstaion
+# Only used block comments for Lana, since same code
+# applies to rest of characters
+
+
 # Lana Convo
 def lanaconvo():
+    """Code defined for when you have a conversation with Lana"""
+    # Randomly picks from 3 different "conversations" to be used
+    # in an interaction
     lana_pickconvo = random.randint(0, 2)
     print("You walk over and talk to Lana.")
     while True:
+        # If the value 0 is picked, this code will run:
         if lana_pickconvo == 0:
             print(textwrap.dedent("""A: Talk about art
 B: Talk about school
 C: Talk about home
 D: Talk about video games
 E: Leave"""))
+            # Defines console input for choosing options
             lanaconvo_0 = input("Choose: ")
-      
             if lanaconvo_0.lower() == "a":
                 print("""You discuss art with Lana. 
 You think you could learn some art techniques from her… 
@@ -27,12 +36,14 @@ You think you could learn some art techniques from her…
 Lana seems like she is barely listening.
 [No Relationship Gain""")
             elif lanaconvo_0.lower() == "c":
+                # If you are under the required relationship level, this will print:
                 if profiles.Lana.level <= 10:
                     print("""You try to talk about your home life, 
 but Lana shoots you a glare.
 You may need to grow closer before talking about this.
 [Relationship Decreased by 1]""")
                     profiles.Lana.level -= 1
+                # If you are over the required relationship level, this will print:
                 elif profiles.Lana.level >= 10:
                     print('''You ask Lana about her home life. 
 She sighs.
@@ -45,6 +56,9 @@ She laughs to herself, and looks at you.
 “Either way, thanks for listening. I needed to get that off my chest.”
 [Relationship Increased by 4]''')
                     profiles.Lana.level += 4
+                    # When finished, this value goes up by 1
+                    # This is so players can't reuse unlocked conversations
+                    # to get a lot of relationship levels very quickly
                     profiles.lana_dialoguecomplete1 += 1
                 elif profiles.lana_dialoguecomplete1 == 1:
                     print("Lana already felt comfortable to talk to you about that.")
@@ -54,12 +68,14 @@ Lana seems interested.
 [Relationship Increased by 1]""")
                 profiles.Lana.level += 1
             elif lanaconvo_0.lower() == "e":
+                # Lets you leave, and sends you back to the menu
                 print("You leave.")
                 break
             else:
                 print("Invalid input!")
           
         elif lana_pickconvo == 1:
+            # If the value 1 is picked, this will print:
             print(textwrap.dedent("""A: Talk about homework
 B: Talk about local events
 C: Talk about gossip
@@ -107,6 +123,7 @@ She looks at you again.
                 print("Invalid input!")
         
         elif lana_pickconvo == 2:
+            # If the value 2 is picked, this will print:
             print("""A: Talk about aspirations
 B: Talk about books
 C: Talk about hobbies
@@ -139,13 +156,14 @@ She talks about a show where teenagers solve mysteries.
                 print("Invalid input!")
 
 
-  # Sid Convo
+  # Sid Conversation
 def sidconvo():
     sid_pickconvo = random.randint(0, 1)
     print("You walk over and talk to Sid.")
   
     while True:
         if sid_pickconvo == 0:
+            # If 0 is picked, this will print:
             print("""A: Talk about school
     B: Talk about work
     C: Talk about romance
@@ -176,6 +194,7 @@ to pull jokes on people in public.
                 print("Invalid input!")
             
         elif sid_pickconvo == 1:
+            # If the value 1 is picked, this will print:
             print("""A: Talk about gossip
 B: Talk about jokes
 C: Talk about family
@@ -216,6 +235,7 @@ def connorconvo():
   
     while True:
         if connor_pickconvo == 0:
+            # If the value 0 is picked, this will print:
             print("""A: Talk about school
 B: Talk about jobs
 C: Talk about sports
@@ -262,6 +282,7 @@ I don’t usually talk about my family. Especially my dad.“
                 print("Invalid input!")
           
         elif connor_pickconvo == 1:
+            # # If the value 1 is picked, this will print:
             print("""A: Talk about homework
 B: Talk about family
 C: Talk about romance
@@ -329,6 +350,7 @@ He says he hasn’t had the time to play any.
                 print("Invalid input!")
           
         elif connor_pickconvo == 2:
+            # If the value 2 is picked, this will print:
             print("""A: Talk about burnout
 B: Talk about football
 C: Talk about hobbies
@@ -366,8 +388,9 @@ def stephenconvo():
     print("You walk over and talk to Stephen.")
     stephen_pickconvo = random.randint(0, 2)
     
-    while True:
+    while True: 
         if stephen_pickconvo == 0:
+          # If the value 0 is picked, this will print:
             print("""A: Talk about math
 B: Talk about gossip
 C: Talk about art
@@ -396,7 +419,8 @@ This conversation goes way longer than you thought it would.
             elif stephenconvo_0.lower() == "e":
                 print("You leave.")
                 break
-        elif stephen_pickconvo == 1: 
+        elif stephen_pickconvo == 1:
+              # If the value 1 is picked, this will print:
               print("""A: Ask for math help
         B: Talk about comics
         C: Talk about news
@@ -438,7 +462,8 @@ and he waited in the middle of the night to get it first.
               elif stephenconvo_1.lower() == "e":
                   print("You leave.")
                   break
-        elif stephen_pickconvo == 2: 
+        elif stephen_pickconvo == 2:
+            # If the value 2 is picked, this will print:
             print("""A: Talk about TV
 B: Talk about movies
 C: Talk about video games
