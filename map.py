@@ -4,14 +4,14 @@ second_locations = {"ELA", "Science",}
 yard_locations = {"Track Field", "Pool", "Gym", "Club Building"}
 
 class FloorOne:
-  def __init__(self, rooms):
-    self.rooms
+    def __init__(self, rooms):
+        self.rooms
 
 class Rooms:
-  def __init__(self, lesson, discription, character):
-    self.lesson = lesson
-    self.discription = discription
-    self.character = character
+    def __init__(self, lesson, discription, character):
+        self.lesson = lesson
+        self.discription = discription
+        self.character = character
 
 Art = Rooms("Art", """
 One of the smaller rooms in the school. 
