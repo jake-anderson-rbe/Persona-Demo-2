@@ -6,36 +6,36 @@ import textwrap
 # Converstaion
 # Lana Convo
 def lanaconvo():
-  lana_pickconvo = random.randint(0, 2)
-  print("You walk over and talk to Lana.")
-  while True:
-    if lana_pickconvo == 0:
-        print(textwrap.dedent("""A: Talk about art
+    lana_pickconvo = random.randint(0, 2)
+    print("You walk over and talk to Lana.")
+    while True:
+        if lana_pickconvo == 0:
+            print(textwrap.dedent("""A: Talk about art
 B: Talk about school
 C: Talk about home
 D: Talk about video games
 E: Leave"""))
-        lanaconvo_0 = input("Choose: ")
+            lanaconvo_0 = input("Choose: ")
       
-        if lanaconvo_0.lower() == "a":
-            print("""You discuss art with Lana. 
+            if lanaconvo_0.lower() == "a":
+                print("""You discuss art with Lana. 
 You think you could learn some art techniques from her… 
 [Relationship Increased by 1""")
-            profiles.Lana.level += 1
-        elif lanaconvo_0.lower() == "b":
-            print("""You talk about how school is going. 
+                profiles.Lana.level += 1
+            elif lanaconvo_0.lower() == "b":
+                print("""You talk about how school is going. 
 Lana seems like she is barely listening.
 [No Relationship Gain""")
-        elif lanaconvo_0.lower() == "c":
-          if profiles.Lana.level <= 10:
-            print("""You try to talk about your home life, 
+            elif lanaconvo_0.lower() == "c":
+                if profiles.Lana.level <= 10:
+                    print("""You try to talk about your home life, 
 but Lana shoots you a glare.
 You may need to grow closer before talking about this.
 [Relationship Decreased by 1]""")
-            profiles.Lana.level -= 1
-          elif profiles.Lana.level >= 10:
-            profiles.Lana.level += 4
-            print('''You ask Lana about her home life. 
+                    profiles.Lana.level -= 1
+                elif profiles.Lana.level >= 10:
+                    profiles.Lana.level += 4
+                    print('''You ask Lana about her home life. 
 She sighs.
 “I dunno. My parents aren’t the best.
 They all seem so focused on work and whatever new fad they’ve found.
@@ -45,27 +45,27 @@ She sighs again, before looking up at you.
 She laughs to herself, and looks at you.
 “Either way, thanks for listening. I needed to get that off my chest.”
 [Relationship Increased by 4]''')
-            profiles.lana_dialoguecomplete1 += 1
-          elif profiles.lana_dialoguecomplete1 == 1:
-            print("Lana already felt comfortable to talk to you about that.")
-        elif lanaconvo_0.lower() == "d":
-            print("""You talk about a new game that came out. 
+                    profiles.lana_dialoguecomplete1 += 1
+                elif profiles.lana_dialoguecomplete1 == 1:
+                    print("Lana already felt comfortable to talk to you about that.")
+            elif lanaconvo_0.lower() == "d":
+                print("""You talk about a new game that came out. 
 Lana seems interested.
 [Relationship Increased by 1]""")
-            profiles.Lana.level += 1
-        elif lanaconvo_0.lower() == "e":
-            print("You leave.")
-            break
-        else:
-          print("Invalid input!")
+                profiles.Lana.level += 1
+            elif lanaconvo_0.lower() == "e":
+                print("You leave.")
+                break
+            else:
+                print("Invalid input!")
           
-    elif lana_pickconvo == 1:
-      print(textwrap.dedent("""A: Talk about homework
+        elif lana_pickconvo == 1:
+          print(textwrap.dedent("""A: Talk about homework
 B: Talk about local events
 C: Talk about gossip
 D: Talk about family
 E: Leave"""))
-      lanaconvo_1 = input("choose: ")
+          lanaconvo_1 = input("choose: ")
       if lanaconvo_1.lower() == "a":
           print("""You talk about some homework you have been assigned.
 She seems sympathetic but uninterested.
@@ -140,143 +140,147 @@ She talks about a show where teenagers solve mysteries.
 
   # Sid Convo
 def sidconvo():
-    sid_pickconvo = random.randint(0, 2)
-    print("You talk to Sid.")
+    sid_pickconvo = random.randint(0, 1)
+    print("You walk over and talk to Sid.")
   
-    if sid_pickconvo == 0:
-      print("""A: Talk about school
-B: Talk about work
-C: Talk about romance
-D: Talk about TV""")
-      sidconvo_0 = input("choose: ")
-      if sidconvo_0.lower() == "a":
-        print("""You discuss school with Sid.
+    while True:
+        if sid_pickconvo == 0:
+            print("""A: Talk about school
+    B: Talk about work
+    C: Talk about romance
+    D: Talk about TV""")
+            sidconvo_0 = input("choose: ")
+            if sidconvo_0.lower() == "a":
+                print("""You discuss school with Sid.
 He complains about the larger workload,
 while talking about how he doesn’t like the teachers.
 [Relationship Increased by 1]""")
-        profiles.Sid.level += 1
-      elif sidconvo_0.lower() == "b":
-        print("""You ask if Sid has been looking at any jobs.
+                profiles.Sid.level += 1
+            elif sidconvo_0.lower() == "b":
+                print("""You ask if Sid has been looking at any jobs.
 He states that he’s been applying everywhere, but hasn’t had any luck.
 [No Relationship Gain]""")
-      elif sidconvo_0.lower() == "c":
-        print("""You ask Sid if he’s had any luck with the ladies. 
+            elif sidconvo_0.lower() == "c":
+                print("""You ask Sid if he’s had any luck with the ladies. 
 He slyly smirks at you.
 [Relationship Increased by 1]""")
-        profiles.Sid.level += 1
-      elif sidconvo_0.lower() == "d":
-        print("""You ask Sid about any shows he’s watched. 
+                profiles.Sid.level += 1
+            elif sidconvo_0.lower() == "d":
+                print("""You ask Sid about any shows he’s watched. 
 He talks about this one show where 4 guys in New York compete 
 to pull jokes on people in public. 
 [Relationship Increased by 1]""")
-        profiles.Sid.level += 1
-      else:
-        print("Invalid input!")
-        
-    elif sid_pickconvo == 1:
-      print("""A: Talk about gossip
+                profiles.Sid.level += 1
+            else:
+                print("Invalid input!")
+            
+        elif sid_pickconvo == 1:
+            print("""A: Talk about gossip
 B: Talk about jokes
 C: Talk about family
 D: Talk about old friends""")
-      sidconvo_1 = input("choose: ")
-      if sidconvo_1.lower() == "a":
-        print("""You ask if Sid has heard any rumors going around. 
+            sidconvo_1 = input("choose: ")
+            if sidconvo_1.lower() == "a":
+                print("""You ask if Sid has heard any rumors going around. 
 He says that he’s heard a rumor that some kids have been jumping into TVs. 
 You aren’t quite sure if he’s being honest or not.
 [No Relationship Gain]""")
-      elif sidconvo_1.lower() == "b":
-        print("""You ask Sid about any jokes he’s heard. 
+            elif sidconvo_1.lower() == "b":
+                print("""You ask Sid about any jokes he’s heard. 
 He tells you a joke about a chicken crossing the road. 
 Said chicken gets run over by a semi-truck. 
 [Relationship Increased by 1]""")
-        profiles.Sid.level += 1
-      elif sidconvo_1.lower() == "c":
-        print("""You discuss family with Sid.
+                profiles.Sid.level += 1
+            elif sidconvo_1.lower() == "c":
+                print("""You discuss family with Sid.
 He says that his parents left town for a “business trip”.
 He seems excited to have the whole house to himself.
 [Relationship Increased by 1]""")
-        profiles.Sid.level += 1
-      elif sidconvo_1.lower() == "d":
-        print("""You ask Sid about anyone from elementary school. 
+                profiles.Sid.level += 1
+            elif sidconvo_1.lower() == "d":
+                print("""You ask Sid about anyone from elementary school. 
 He talks about this one girl who started her own punk rock band.
 [No Relationship Gain]""")
-      else:
-        print("Invalid input!")
+            elif sidconvo_1.lower() == "e":
+                print("You leave.")
+                break
+            else:
+                print("Invalid input!")
 
 
   # Connor Convo
 def connorconvo():
-  connor_pickconvo = random.randint(0, 2)
-  print("You walk over and talk to Connor.")
+    connor_pickconvo = random.randint(0, 2)
+    print("You walk over and talk to Connor.")
   
-  while True:
-    if connor_pickconvo == 0:
-        print("""A: Talk about school
+    while True:
+        if connor_pickconvo == 0:
+            print("""A: Talk about school
 B: Talk about jobs
 C: Talk about sports
 D: Talk about TV
 E: Leave""")
-        connorconvo_0 = input("Choose: ")
-        if connorconvo_0.lower() == "a":
-          print("""You talk about school with Connor. 
+            connorconvo_0 = input("Choose: ")
+            if connorconvo_0.lower() == "a":
+                print("""You talk about school with Connor. 
 He says that he’s been more focused on sports,
 but has been trying to make time for other things. 
 [No Relationship Gain]""")
-        elif connorconvo_0.lower() == "b":
-          print("""You ask if Connor has been looking for any jobs. 
+            elif connorconvo_0.lower() == "b":
+                print("""You ask if Connor has been looking for any jobs. 
 He says he doesn’t have the time to find one.
 [No Relationship Gain]""")
-        elif connorconvo_0.lower() == "c":
-            print("""You ask Connor how the school sports are going.
+            elif connorconvo_0.lower() == "c":
+                print("""You ask Connor how the school sports are going.
 He says that both teams have been practicing a lot more than they usually do. 
 [Relationship Increased by 1]""")
-            profiles.Connor.level += 1
-        elif connorconvo_0.lower() == "d":
-          if profiles.Connor.level <= 10:
-            print("""You ask Connor what sorts of shows he watches. 
+                profiles.Connor.level += 1
+            elif connorconvo_0.lower() == "d":
+                if profiles.Connor.level <= 10:
+                    print("""You ask Connor what sorts of shows he watches. 
 He sighs.
 You may need to grow closer before talking about this.
 [Relationship Decreased by 1]""")
-            profiles.Connor.level -= 1
-          elif profiles.Connor.level >= 10:
-            print('''You ask Connor what shows he watches. He sighs.
+                    profiles.Connor.level -= 1
+                elif profiles.Connor.level >= 10:
+                    print('''You ask Connor what shows he watches. He sighs.
 “I would watch TV, but my dad says it’s a ‘distraction’. 
 It’s like he hates me having hobbies.”
 He looks defeated.
 “Oh, sorry about going off the cuff like that. 
-I don’t usually talk about my family. Especially my dad.
+I don’t usually talk about my family. Especially my dad.“
 [Relationship Increased by 4]''')
-            profiles.Connor.level += 4
-            profiles.connor_dialoguecomplete1 += 1
-        elif profiles.lana_dialoguecomplete1 == 1:
-          print("Connor already felt comfortable to talk to you about that.")
-        elif connorconvo_0.lower() == "e":
-          print("You leave.")
-          break
-        else:
-          print("Invalid input!")
+                    profiles.Connor.level += 4
+                    profiles.connor_dialoguecomplete1 += 1
+                elif profiles.lana_dialoguecomplete1 == 1:
+                    print("Connor already felt comfortable to talk to you about that.")
+            elif connorconvo_0.lower() == "e":
+                print("You leave.")
+                break
+            else:
+                print("Invalid input!")
           
-    elif connor_pickconvo == 1:
-      print("""A: Talk about homework
+        elif connor_pickconvo == 1:
+            print("""A: Talk about homework
 B: Talk about family
 C: Talk about romance
 D: Talk about video games
 E: Leave""")
-      connorconvo_1 = input("choose: ")
-      if connorconvo_1.lower() == "a":
-        print("""You ask Connor about any homework he has. 
+            connorconvo_1 = input("choose: ")
+            if connorconvo_1.lower() == "a":
+                print("""You ask Connor about any homework he has. 
 He says that he’s finished his ELA and Math homework, 
 but hasn’t had time for anything else.
 [No Relationship Gain]""")
-      elif connorconvo_1.lower() == "b":
-        if profiles.Connor.level <= 15:
-          print("""You ask Connor about his family. 
+            elif connorconvo_1.lower() == "b":
+                if profiles.Connor.level <= 15:
+                    print("""You ask Connor about his family. 
 He retorts with “what about them?”
 You may need to grow closer before talking about this.
 [Relationship Decreased by 1]""")
-          profiles.Lana.level -= 1
-        elif profiles.Connor.level >= 15:
-          print('''You ask Connor about his family. He responds:
+                    profiles.Connor.level -= 1
+                elif profiles.Connor.level >= 15:
+                    print('''You ask Connor about his family. He responds:
 “I mean, yeah, they’re cool. I guess. My dad is a bit of a control freak, 
 though. He goes on and on about me being the ‘star athlete’ and 
 going on to play in the NFL or something. 
@@ -287,17 +291,19 @@ He sighs.
 But, what can you do, y’know? 
 Maybe I can be a writer one day, instead of doing sports.”
 [Relationship Increased by 4]''')
-          profiles.connor_dialoguecomplete2 += 1
-        elif profiles.connor_dialoguecomplete2 == 1:
-          print("Connor already felt comfortable to talk to you about that.")
-      elif connorconvo_1.lower() == "c":
-        if profiles.Connor.level <= 20:
-          print("""You ask Connor how he’s been doing romantically. 
+                    profiles.Connor.level += 4
+                    profiles.connor_dialoguecomplete2 += 1
+                elif profiles.connor_dialoguecomplete2 == 1:
+                    print("Connor already felt comfortable to talk to you about that.")
+            elif connorconvo_1.lower() == "c":
+                if profiles.Connor.level <= 20:
+                    print("""You ask Connor how he’s been doing romantically. 
 He doesn’t really know how to answer that question.
 You may need to grow closer before talking about this.
 [Relationship Decreased by 1]""")
-        elif profiles.Connor.level >= 20:
-          print('''You ask Connor how he’s been doing romantically. 
+                    profiles.Connor.level -= 1
+                elif profiles.Connor.level >= 20:
+                    print('''You ask Connor how he’s been doing romantically. 
 He gives you a nervous look.
 “I haven’t really told anyone about this, but… I think I might be gay. 
 It’s made finding someone pretty hard. 
@@ -307,50 +313,51 @@ He nervously laughs.
 I don’t know which way your flag flies, so I don’t wanna pressure you.
 Anyways, thanks for letting me talk. Feels like a weight off my shoulders.”
 [Relationship Increased by 4]''')
-          profiles.connor_dialoguecomplete3 += 1
-        elif profiles.connor_dialoguecomplete3 == 1:
-          print("Connor already felt comfortable to talk to you about that.")
-      elif connorconvo_1.lower() == "d":
-        print("""You ask if Connor has played any video games lately.
+                    profiles.Connor.level += 4
+                    profiles.connor_dialoguecomplete3 += 1
+                elif profiles.connor_dialoguecomplete3 == 1:
+                    print("Connor already felt comfortable to talk to you about that.")
+            elif connorconvo_1.lower() == "d":
+                print("""You ask if Connor has played any video games lately.
 He says he hasn’t had the time to play any.
 [No Relationship Gain]""")
-      elif connorconvo_1.lower() == "e":
-        print("You leave.")
-        break
-      else:
-        print("Invalid input!")
-        
-    elif connor_pickconvo == 2:
-      print("""A: Talk about burnout
+            elif connorconvo_1.lower() == "e":
+                print("You leave.")
+                break
+            else:
+                print("Invalid input!")
+          
+        elif connor_pickconvo == 2:
+            print("""A: Talk about burnout
 B: Talk about football
 C: Talk about hobbies
 D: Talk about local events
 E: Leave""")
-      connorconvo_2 = input("choose: ")
-      if connorconvo_2.lower() == "a":
-        print("""You ask Connor if he’s been feeling 
+            connorconvo_2 = input("choose: ")
+            if connorconvo_2.lower() == "a":
+                print("""You ask Connor if he’s been feeling 
 burnt out with all the work he’s doing. 
 He sighs, but nods.
 [No Relationship Gain]""")
-      elif connorconvo_2.lower() == "b":
-        print("""You ask Connor about the football game. 
+            elif connorconvo_2.lower() == "b":
+                print("""You ask Connor about the football game. 
 He says that the deadline for the game is coming pretty soon, 
 and he’s really focusing hard on it. 
 [Relationship Increased by 1]""")
-        profiles.Connor.level += 1
-      elif connorconvo_2.lower() == "c":
-        print("""You ask Connor about any hobbies he has. 
+                profiles.Connor.level += 1
+            elif connorconvo_2.lower() == "c":
+                print("""You ask Connor about any hobbies he has. 
 He says he’s been dabbling in creative writing, 
 and has been working on his own story.
 [Relationship Increased by 1]""")
-        profiles.Connor.level += 1
-      elif connorconvo_2.lower() == "d":
-        print("""You ask Connor if he’s going to any local events. 
+                profiles.Connor.level += 1
+        elif connorconvo_2.lower() == "d":
+            print("""You ask Connor if he’s going to any local events. 
 He says that he wishes he could, but can’t.
 [No Relationship Gain]""")
-      elif connorconvo_2.lower() == "e":
-        print("You leave.")
-        break
+        elif connorconvo_2.lower() == "e":
+            print("You leave.")
+            break
 
 
   # Stephen Convo
@@ -387,7 +394,7 @@ This conversation goes way longer than you thought it would.
             elif stephenconvo_0.lower() == "e":
                 print("You leave.")
                 break
-            elif stephen_pickconvo == 1: 
+        elif stephen_pickconvo == 1: 
               print("""A: Ask for math help
         B: Talk about comics
         C: Talk about news
@@ -396,31 +403,31 @@ This conversation goes way longer than you thought it would.
               stephenconvo_1 = input("choose: ")
               if stephenconvo_1.lower() == "a":
                 if profiles.Stephen.level <= 10:
-                  print("""You ask Stephen for some help with math homework. 
-He gives you an annoyed look.
-You may need to grow closer before talking about this.
-[Relationship Decreased by 1]""")
-                  profiles.Stephen.level -= 1
+                      print("""You ask Stephen for some help with math homework. 
+    He gives you an annoyed look.
+    You may need to grow closer before talking about this.
+    [Relationship Decreased by 1]""")
+                      profiles.Stephen.level -= 1
                 elif profiles.Stephen.level >= 10:
-                  print('''You ask Stephen for some help with math homework.
-“Alright, since we’re on good terms, sure. I think I may be of some help.”
-He takes your backpack, and you start studying together. 
-Stephen seems really smart.
-[Relationship Increased by 4]''')
-                  profiles.Stephen.level += 4
-                  profiles.stephen_dialoguecomplete1 += 1
+                    print('''You ask Stephen for some help with math homework.
+  “Alright, since we’re on good terms, sure. I think I may be of some help.”
+  He takes your backpack, and you start studying together. 
+  Stephen seems really smart.
+  [Relationship Increased by 4]''')
+                    profiles.Stephen.level += 4
+                    profiles.stephen_dialoguecomplete1 += 1
                 elif profiles.stephen_dialoguecomplete1 == 1:
-                  print("Stephen already felt comfortable to talk to you about that.")
+                    print("Stephen already felt comfortable to talk to you about that.")
               elif stephenconvo_1.lower() == "b":
                   print("""You ask Stephen if he likes any comics. 
-        He goes on and on about this one “manga” where 
-        a guy turns into a sword. 
-        [Relationship Increased by 1]""")
+He goes on and on about this one “manga” where 
+a guy turns into a sword. 
+[Relationship Increased by 1]""")
               elif stephenconvo_1.lower() == "c":
                   print("""You ask Stephen about any news lately. 
-        He says a new video game came out, 
-        and he waited in the middle of the night to get it first.
-        [No Relationship Gain]""")
+He says a new video game came out, 
+and he waited in the middle of the night to get it first.
+[No Relationship Gain]""")
               elif stephenconvo_1.lower() == "d":
                   print("""You ask Stephen if he’s heading to any events around town.
         He excitedly talks about a comic con coming up.
@@ -429,31 +436,31 @@ Stephen seems really smart.
                   print("You leave.")
                   break
         elif stephen_pickconvo == 2: 
-          print("""A: Talk about TV
-    B: Talk about movies
-    C: Talk about video games
-    D: Talk about weather
-    E: Leave""")
-          stephenconvo_2 = input("choose: ")
-          if stephenconvo_2.lower() == "a":
-              print("""You ask Stephen about any TV shows he watches. 
-    He says he only watches anime.
-    [Relationship Increased by 1]""")
-              profiles.Stephen.level += 1
-          elif stephenconvo_2.lower() == "b":
-              print("""You ask Stephen about any movies he’s watched. 
-    He talks about this adaptation of a comic he read, 
-    and how the movie was so much worse than the comic.  
-    [No Relationship Gain]""")
-          elif stephenconvo_2.lower() == "c":
-              print("""You ask Stephen about any video games he’s played recently. 
-    He gushes about this game where you get to date anime girls. 
-    [Relationship Increased by 1]""")
-              profiles.Stephen.level += 1
-          elif stephenconvo_2.lower() == "d":
-              print("""You ask Stephen about the weather. 
-    He says he doesn’t really care, since he stays inside a lot.
-    [No Relationship Gain]""")
-          elif stephenconvo_2.lower() == "e":
-              print("You leave.")
-              break
+            print("""A: Talk about TV
+B: Talk about movies
+C: Talk about video games
+D: Talk about weather
+E: Leave""")
+            stephenconvo_2 = input("choose: ")
+            if stephenconvo_2.lower() == "a":
+                print("""You ask Stephen about any TV shows he watches. 
+He says he only watches anime.
+[Relationship Increased by 1]""")
+                profiles.Stephen.level += 1
+            elif stephenconvo_2.lower() == "b":
+                print("""You ask Stephen about any movies he’s watched. 
+He talks about this adaptation of a comic he read, 
+and how the movie was so much worse than the comic.  
+[No Relationship Gain]""")
+            elif stephenconvo_2.lower() == "c":
+                print("""You ask Stephen about any video games he’s played recently. 
+        He gushes about this game where you get to date anime girls. 
+        [Relationship Increased by 1]""")
+                profiles.Stephen.level += 1
+            elif stephenconvo_2.lower() == "d":
+                print("""You ask Stephen about the weather. 
+        He says he doesn’t really care, since he stays inside a lot.
+        [No Relationship Gain]""")
+            elif stephenconvo_2.lower() == "e":
+                print("You leave.")
+                break
