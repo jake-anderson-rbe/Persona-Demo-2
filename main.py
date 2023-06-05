@@ -5,6 +5,7 @@ import conversation
 import profiles
 import classes
 import random
+import tutorial
 
 timeuntilend = 6
 actionsleft = 5
@@ -224,43 +225,6 @@ Maybe talk to them when they are in a place more familiar to them.""")
     menu()
 
 
-
-
-# Tutorial
-def tutorial():
-  print("\nYour old friend Sid approaches you\n")
-  tutorialinput = input("Do you want to talk with him? (Yes) (No):")
-  # Decide To Do Tutorial
-  if tutorialinput.lower() == "yes":
-    print("You go to meet Sid")
-    conversation.sidintro()
-    print("""\nYou bid Sid goodbye and enter the school.
-You enter the first class you see, art class.""")
-    art()
-    print("""\nThe Bell signalling the end of class goes and you swiftly exit.
-You get swept up in the crowd of kids.
-Next thing you know, you are in a Gym""")
-    gym()
-    print("""\nYou and Connor walk to the main building.
-The moment you two enter, you are once again taken by a crowd.
-you reach for Connors hand in the sea of students, but he is already gone.
-Instead you grab hold of a... textbook!?
-Welcome to math class.""")
-    math()
-    print("""\nFor the last time, you are swept up in a crowd as you exit class.
-You find yourself at the entrance of the school.
-Finally, you get some time to yourself.
-Time to officially start your school life!""")
-  # Decide Not To Do Tutorial:
-  elif tutorialinput.lower() == "no":
-    print("\nYou spend the day wandering the halls")
-    profiles.Lana.level += 1
-    profiles.Connor.level += 7
-    profiles.Stephen.level += 3
-    profiles.Sid.level += 15
-    profiles.Sid.intro += 1
-    
-    
 # Tutorial Main
 print("Welcome to HighSchool")
 print("You just transfered here as a 2nd year and know nobody here.")
@@ -270,7 +234,7 @@ so why not go out and make some more""")
 print("\nObjective: Meet Fellow Students ")
 
 # Starting and Ending Tutorial
-tutorial()
+tutorial.tutorial()
 actionsleft -= 5
 
 # Day Ends, Activities and Ending

@@ -15,16 +15,20 @@ class Rooms:
 
 Art = Rooms("Art", """
 One of the smaller rooms in the school. 
-Inorder to use this small space, students have moved the chairs and desks to the far side of the room.
+Inorder to use this small space, 
+students have moved the chairs and desks to the far side of the room,
 in place of where these school essentials are stools and canvases.
 """, 'Lana')
 Math = Rooms("Math", """
-A normal classroom, that is if you look past all the students that are outwardly expressing their distane for this class.
+A normal classroom, that is if you look past all the students 
+that are outwardly expressing their distane for this class.
 """, "Connor")
 Social = Rooms("Social", """
 A medium sized classroom.
-A giant map of the world and a much smaller map of europe hang behind the teacher podium.
-The students in this class are either chearfully talking to friends or furiously writing in notebooks, studying the maps.
+A giant map of the world and a much smaller map of 
+europe hang behind the teacher podium.
+The students in this class are either chearfully talking to friends
+or furiously writing in notebooks, studying the maps.
 """, "Lana")
 ELA = Rooms("ELA", """
 Unlike the other normal rooms, the ELA classroom is more of a lecture hall.
@@ -34,11 +38,13 @@ or they are struggling to get last minute work done.
 Science = Rooms("Science", """
 A normally sized room, but there are no chairs or desks.
 instead, this room has six quartz tables that take up the centre of the room.
-students prepair safety gear and start cleaning some of the messes the last class made.
+students prepair safety gear and start cleaning some of the messes
+the last class made.
 """, "Stephen")
 Track = Rooms("Track Field", """
 A large 400m Track spans around a football field.
-Not many students are here, but as for the ones who are, they sit on the bleachers or are runing around the track.
+Not many students are here, but as for the ones who are, 
+they sit on the bleachers or are runing around the track.
 """, "Connor and Stephen")
 Pool = Rooms("Pool", """
 A 25 yard long pool takes up the inside of a glassroofed buildiung.
@@ -51,7 +57,9 @@ downstairs is an actual gym.
 The students here are mostly doing stretches in preperation for the class.
 """, "Connor")
 Club = Rooms("Club Building", """
-Small building dissconected from  the right side of the school.
-This building is practically just a small school building, with classrooms and everything.
-You would enter a classroom to see what the students are doing, but you dont want to disturb the clubs.
+Small building dissconected from the right side of the school.
+This building is practically just a small school building, 
+with classrooms and everything.
+You would enter a classroom to see what the students are doing, 
+but you dont want to disturb the clubs.
 """, "Lana and Sid")
