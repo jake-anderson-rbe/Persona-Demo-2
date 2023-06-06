@@ -5,12 +5,6 @@ first_locations = {"Art", "Math", "Social"}
 second_locations = {"ELA", "Science",}
 yard_locations = {"Track Field", "Pool", "Gym", "Club Building"}
 
-
-class FloorOne:
-    def __init__(self, rooms):
-        self.rooms
-
-
 class Rooms:
     def __init__(self, lesson, discription, character):
         """Class for defining each school location, and their character"""
@@ -18,24 +12,25 @@ class Rooms:
         self.discription = discription
         self.character = character
 
-
+# Objects for each of the rooms
+# Has room name, description, and character
 Art = Rooms("Art", """
 One of the smaller rooms in the school. 
-Inorder to use this small space, 
+In order to use this small space, 
 students have moved the chairs and desks to the far side of the room,
-in place of where these school essentials are stools and canvases.
+and in place of where these school essentials would be are stools and canvases.
 """, 'Lana')
 
 Math = Rooms("Math", """
 A normal classroom, that is if you look past all the students 
-that are outwardly expressing their distane for this class.
+that are outwardly expressing their distain for this class.
 """, "Connor")
 
 Social = Rooms("Social", """
 A medium sized classroom.
 A giant map of the world and a much smaller map of 
-europe hang behind the teacher podium.
-The students in this class are either chearfully talking to friends
+Europe hang behind the teacher podium.
+The students in this class are either cheerfully talking to friends
 or furiously writing in notebooks, studying the maps.
 """, "Lana")
 
@@ -47,15 +42,15 @@ or they are struggling to get last minute work done.
 
 Science = Rooms("Science", """
 A normally sized room, but there are no chairs or desks.
-instead, this room has six quartz tables that take up the centre of the room.
-students prepair safety gear and start cleaning some of the messes
+Instead, this room has six quartz tables that take up the centre of the room.
+Students prepare safety gear and start cleaning some of the messes
 the last class made.
 """, "Stephen")
 
 Track = Rooms("Track Field", """
-A large 400m Track spans around a football field.
+A large 400m track spans around a football field.
 Not many students are here, but as for the ones who are, 
-they sit on the bleachers or are runing around the track.
+they sit on the bleachers or are running around the track.
 """, "Connor and Stephen")
 
 Pool = Rooms("Pool", """
@@ -65,9 +60,9 @@ To no ones surprise, the students here are happily swimming or racing one anothe
 
 Gym = Rooms("Gym", """
 A large building connected to the left of the school.
-inside there are two basketball hoops on either side of the gym floor.
-downstairs is an actual gym.
-The students here are mostly doing stretches in preperation for the class.
+Inside there are two basketball hoops on either side of the gym floor,
+and downstairs is an actual gym.
+The students here are mostly doing stretches in preparation for the class.
 """, "Connor")
 
 Club = Rooms("Club Building", """

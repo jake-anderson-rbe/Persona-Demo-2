@@ -1,5 +1,5 @@
+# Imports
 import profiles
-
 
 def lanaintro_end():
     #"""Code defining end of Lana's intro"""
@@ -68,14 +68,14 @@ C: What are you doing?""")
 
   
 def connorintro_end():
-    #"""Code defining end of Connor's intro"""
+    """Code defining end of Connor's intro"""
     print("""\n“Well, I got a game to practice for.
 Guess I’ll see you around.”""")
     print("You leave the gym.")
     profiles.Connor.intro += 1 # Connor intro is now complete
 
 def connorintro_2():
-    # Code defining second section of Connor's intro
+    """Code defining second section of Connor's intro"""
     print("""A: You on the basketball team?
 B: Is there anything I can check out here?
 C: Can I play against you?""")
@@ -122,15 +122,15 @@ I’m making sure I won’t lose.”\n''')
 
       
 def sidintro_end():
-    #"""Code defining end of Sid's intro"""
+    """Code defining end of Sid's intro"""
     print('''\n“Well, would you look at the time.
 I gotta run to class! 
 See you later, dude!”''')
     print("He rushes off.")
-    profiles.Sid.intro += 1
+    profiles.Sid.intro += 1 # Sid intro is now complete
 
 def sidintro_2():
-    #"""Code defining second section of Sid's intro"""
+    """Code defining second section of Sid's intro"""
     print('''“So, you excited? 
 Heard this school is great when it comes to the ladies.”\n
 A: Sure.
@@ -150,7 +150,7 @@ You don’t wanna be a buzzkill!”''')
         sidintro_2()
 
 def sidintro_1():
-    #"""Code defining first section of Sid's intro"""
+    """Code defining first section of Sid's intro"""
     print('''\nAs you enter the school,
 you see a familiar face at the entrance.
 It’s Sid, one of your old school friends. 
@@ -177,14 +177,14 @@ Y'know what, it's fine.”\n''')
 
 
 def stephenintro_end():
-    #"""Code defining end of Stephen's intro"""
+    """Code defining end of Stephen's intro"""
     print('''\n“I don’t mean to be rude, but could you go? 
 I need to finish all of this.”''')
     print("You leave the room.")
-    profiles.Stephen.intro += 1
+    profiles.Stephen.intro += 1 # Stephen intro now complete
 
 def stephenintro_2():
-    #"""Code defining second section of Stephen's intro"""
+    """Code defining second section of Stephen's intro"""
     print("""A: I like math too.
 B: You studying?
 C: You sure you don’t need any help?""")
@@ -203,7 +203,7 @@ C: You sure you don’t need any help?""")
          stephenintro_2()
 
 def stephenintro_1():
-    #"""Code defining first section of Stephen's intro"""
+    """Code defining first section of Stephen's intro"""
     print("""\nYou enter the science room, and see a kid 
 sitting at a desk.
 He’s doing some experiments, and they look complex.\n""")

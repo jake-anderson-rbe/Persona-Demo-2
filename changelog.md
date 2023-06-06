@@ -84,3 +84,26 @@ Finished day system
 Fixed issue where days would go into the negatives
 Fixed issue where typing in capital letters in some instances would give an error
 Fixed parts of code where Lana was referenced instead of Sid
+
+## V1.0 (Final) - 6/5/2023
+
+### Added
+Added header with credits, title, date, etc
+Added game description to header
+Added comments for code
+Added docstrings for code
+
+### Changed
+Code is now in PEP8 format
+
+### Fixed
+Fixed ending screen not tallying all relationship levels
+Fixed typos and misspellings
+Fixed issue where player started at 6 actions instead of 5
+Fixed some variables being assigned to the wrong characters
+
+## Final Note
+Sorry that this is a seperate fork from 0.1 and 0.1.1. Trying to commit
+any changes to it wouldn't work, so we made a new fork that would
+actually work for it.
+- Jake

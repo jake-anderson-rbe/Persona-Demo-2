@@ -6,7 +6,8 @@ class Character:
         self.name = name
         self.level = level
         self.intro = intro
-      
+
+# Objects set for each of the characters
 Lana = Character("Lana", 0, 0)
 Sid = Character("Sid", 0, 0)
 Connor = Character("Connor", 0, 0)
@@ -27,3 +28,5 @@ connor_dialoguecomplete2 = 0
 connor_dialoguecomplete3 = 0
 # Stephen:
 stephen_dialoguecomplete1 = 0
+
+maxrelation = 25

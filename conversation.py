@@ -1,14 +1,12 @@
+# Imports
 import profiles
 import random
-import textwrap
 Rooms = ("Talk", "Attend Class", "Leave")
 
-
-# Converstaion
 # Only used block comments for Lana, since same code
 # applies to rest of characters
 
-
+# Conversation Code
 # Lana Convo
 def lanaconvo():
     """Code defined for when you have a conversation with Lana"""
@@ -19,11 +17,11 @@ def lanaconvo():
     while True:
         # If the value 0 is picked, this code will run:
         if lana_pickconvo == 0:
-            print(textwrap.dedent("""A: Talk about art
+            print("""A: Talk about art
 B: Talk about school
 C: Talk about home
 D: Talk about video games
-E: Leave"""))
+E: Leave""")
             # Defines console input for choosing options
             lanaconvo_0 = input("Choose: ")
             if lanaconvo_0.lower() == "a":
@@ -76,11 +74,11 @@ Lana seems interested.
           
         elif lana_pickconvo == 1:
             # If the value 1 is picked, this will print:
-            print(textwrap.dedent("""A: Talk about homework
+            print("""A: Talk about homework
 B: Talk about local events
 C: Talk about gossip
 D: Talk about family
-E: Leave"""))
+E: Leave""")
             lanaconvo_1 = input("choose: ")
             if lanaconvo_1.lower() == "a":
                 print("""You talk about some homework you have been assigned.

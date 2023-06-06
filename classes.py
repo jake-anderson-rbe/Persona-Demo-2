@@ -1,3 +1,4 @@
+# Imports
 import profiles
 
 # Defs For Each Of The Classes
@@ -11,6 +12,7 @@ def attendart():
         print("""By showing interest in Lana's favorite class, you grew closer. 
 [Relationship Increased By 2]""")
         profiles.Lana.level += 2
+        profiles.maxrelation += 2
       
   # Social
 def attendsocial():
@@ -20,6 +22,7 @@ def attendsocial():
         print("You attend the class.")
     if profiles.Lana.intro == 1:
         profiles.Lana.level += 1
+        profiles.maxrelation += 1
         print("""Though reluctant to accept your help, Lana learned from you.
 [Relationship Increased By 1]""")
       
@@ -42,10 +45,11 @@ def attendela():
         print("You attend the class.")
     elif profiles.Lana.intro == 1:        
         print("""You and Sid convinced Lana to join you for a short homework session after class.
-[Lana Relationship Increaded By 1]
+[Lana Relationship Increased By 1]
 [Sid Relationship Increased By 4]""")
         profiles.Lana.level += 1
         profiles.Sid.level += 4
+        profiles.maxrelation += 5
         
   # Gym
 def attendgym():
@@ -59,6 +63,7 @@ Luckily you were on a team with Connor.
 You and Connor dominated the court.
 [Relationship with Connor Increased By 2]""")
         profiles.Connor.level += 2
+        profiles.maxrelation += 2
       
   # Pool
 def attendpool():
@@ -69,6 +74,7 @@ He beat you 4 - 0.
 [Relationship Increased By 2]
 [Pride Decreased By 999]""")
     profiles.Sid.level += 2
+    profiles.maxrelation += 2
   
   # Track
 def attendtrack():
@@ -85,6 +91,8 @@ Connor and you had fun but Stephen was too exhausted to even talk.
 [Connor Relationship Increased By 5]""")
         profiles.Connor.level += 5
         profiles.Stephen.level -= 2
+        profiles.maxrelation -= 2
+        profiles.maxrelation += 5
       
   # Math
 def attendmath():
@@ -94,8 +102,9 @@ def attendmath():
 By helping him with the parts he didint understand, you grew closer.
 [Relatinship Increased By 3""")
     profiles.Connor.level += 3
+    profiles.maxrelation += 3
   
-  # Club
+  # Club Building
 def attendclub():
     """Code for when attend class function is used
     in the Club Building area"""
@@ -107,3 +116,5 @@ def attendclub():
 [Relationship With Lana Increased By 2]""")
         profiles.Sid.level -= 4
         profiles.Lana.level += 2
+        profiles.maxrelation -= 4
+        profiles.maxrelation += 2

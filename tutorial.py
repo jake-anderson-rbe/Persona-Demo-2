@@ -4,8 +4,10 @@ import intros
 
 # Tutorial
 def tutorial():
+    """Code defining all the tutorial text between intros,
+    and moving along to the next intro"""
     print("\nYour old friend Sid approaches you\n")
-    tutorialinput = input("Do you want to talk with him? (Yes) (No):")
+    tutorialinput = input("Do you want to talk with him? (Yes) (No): ")
   # Decide To Do Tutorial
     if tutorialinput.lower() == "yes":
         print("\nYou go to meet Sid")
