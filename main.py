@@ -36,7 +36,7 @@ import tutorial
 
 # Variables
 timeuntilend = 6 # Number of days before the game ends
-actionsleft = 5 # Number of actions/things a player can do in a day
+actionsleft = 8 # Number of actions/things a player can do in a day
 
 
 # Each Class
@@ -321,7 +321,7 @@ print("\nObjective: Meet Fellow Students")
 
 # Starting and Ending Tutorial
 tutorial.tutorial()
-actionsleft -= 5
+actionsleft -= 8
 
 # Day Ends, Activities and Ending
   # No More Actions + Day Reset
@@ -332,7 +332,7 @@ it seems time to head home.\n
 You wake up the next day, ready for another day of school.
 [Days Until Game Over = {timeuntilend}]\n
 You arrive at the school gates""")
-      actionsleft += 5 
+      actionsleft += 8 
   
 # System for getting around
 def travel():
@@ -441,6 +441,8 @@ can only be used once.""")
         """Quits the game"""
         print("Goodbye!")
         sys.exit()
+    elif menu_input.lower() == "test":
+        conversation.lanaconvo()
     else:
         print("Incorrect input!")
         menu()
@@ -474,7 +476,7 @@ while True:
         print("""The day is over, and you return home.
 ***
 You return the next day.""")
-        actionsleft += 5
+        actionsleft += 8
         timeuntilend -= 1
         print(f"[Days Left: {timeuntilend}]")
     if timeuntilend == 0:

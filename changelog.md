@@ -102,6 +102,15 @@ Fixed typos and misspellings
 Fixed issue where player started at 6 actions instead of 5
 Fixed some variables being assigned to the wrong characters
 
+## V1.0.1 (Hotfix) - 6/6/2023
+
+### Changed
+Bumped action count per day up to 8
+After talking about a conversation topic, you are sent back to the menu
+
+### Fixed
+Changes fixed exploit where player could easily repeat same options and max out relationships
+
 ## Final Note
 Sorry that this is a seperate fork from 0.1 and 0.1.1. Trying to commit
 any changes to it wouldn't work, so we made a new fork that would
